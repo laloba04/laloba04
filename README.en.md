@@ -4,8 +4,8 @@
 <div align="center">
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/hero.svg?v=a171ec33">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/hero.svg?v=a36c5bd2" width="100%" alt="Maria Bravo, Full Stack and Mobile developer in Bilbao, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic and React Native; devops with Docker, Kubernetes and GitHub Actions; and status: open to work, available now.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/hero.svg?v=df84fa44">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/hero.svg?v=64f65140" width="100%" alt="Maria Bravo, Full Stack and Mobile developer in Bilbao, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic and React Native; devops with Docker, Kubernetes and GitHub Actions; and status: open to work, available now.">
 </picture>
 
 <a href="https://mariaba.pages.dev/en/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-portfolio.svg?v=5111d16e" alt="PORTFOLIO"></a>
@@ -19,8 +19,8 @@
 </picture>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/achievements.svg?v=8a2ae663">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/achievements.svg?v=3fd94500" width="100%" alt="Achievements unlocked: Record: 39 contributions in a single day; Official DAM degree (Spanish higher VET); 600 h Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; Team DAM final project: BLE access control with a Raspberry Pi; RAG with ChromaDB (rag-notas) (in progress).">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/achievements.svg?v=750281c9">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/achievements.svg?v=7217c3f6" width="100%" alt="Achievements unlocked: Record: 39 contributions in a single day; Official DAM degree (Spanish higher VET); 600 h Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; Team DAM final project: BLE access control with a Raspberry Pi; RAG with ChromaDB (rag-notas) (in progress).">
 </picture>
 
 <picture>

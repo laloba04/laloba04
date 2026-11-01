@@ -18,7 +18,7 @@ def _terminal(body, d, lang, mode, tx, ty, tw, th, fsize, lh):
     body.append(f'<rect x="{tx+4}" y="{ty+4}" width="{tw-8}" height="24" fill="{PANEL}"/>')
     for k, c in enumerate(["#f85149", "#d29922", GREEN]):
         body.append(f'<rect x="{tx+14+k*16}" y="{ty+12}" width="8" height="8" fill="{c}"/>')
-    body.append(t(tx + tw / 2, ty + 21, "maria@lobera: ~", 12, MUTED, anchor="middle"))
+    body.append(t(tx + tw / 2, ty + 21, "maria@dev: ~", 12, MUTED, anchor="middle"))
     cw = fsize * CW
     y = ty + 30 + lh
     delay = 0.3
@@ -307,7 +307,7 @@ def achievements(d, lang, mode, cfg, live=None):
     body.append(f'<rect x="{tx0+4}" y="{term_top+4}" width="{tw-8}" height="24" fill="{PANEL}"/>')
     for k, c in enumerate(["#f85149", "#d29922", GREEN]):
         body.append(f'<rect x="{tx0+14+k*16}" y="{term_top+12}" width="8" height="8" fill="{c}"/>')
-    body.append(t(tx0 + tw / 2, term_top + 21, "maria@lobera: ~/logros", 12, MUTED, anchor="middle"))
+    body.append(t(tx0 + tw / 2, term_top + 21, "maria@dev: ~/logros", 12, MUTED, anchor="middle"))
     y = term_top + 30 + lh
     body.append(t(tx0 + 16, y, "$", fs, PURPLE) + t(tx0 + 16 + 2 * fs * CW, y, "cat logros.log", fs, GREEN))
     y += 10
