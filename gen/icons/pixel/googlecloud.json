@@ -1,0 +1,27 @@
+{
+"size": 16,
+"palette": {
+"a": "#ed4233",
+"b": "#836d93",
+"c": "#fabd13",
+"d": "#5e9d69"
+},
+"rows": [
+"................",
+"................",
+".....aaaaaa.....",
+"....aaaaaaab....",
+"...aaaaaaabbb...",
+"...accc...bbbb..",
+"..cccccc...bbb..",
+".ccccccc...bbbb.",
+".ccc..c.....bbb.",
+"cccc........bbbb",
+".ccc........bbb.",
+".cccddddbbbbbbb.",
+"..cdddddbbbbbb..",
+"....ddddbbbb....",
+"................",
+"................"
+]
+}

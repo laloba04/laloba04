@@ -61,6 +61,18 @@ def pixelate(name):
     return {"size": size, "palette": {v: k for k, v in used.items()}, "rows": rows}
 
 
+# Logos con partes oscuras que no se verían sobre el fondo: los colores muy oscuros pasan a claro
+LIGHTEN_DARK = {"amazonwebservices", "flask"}
+
+
+def lighten_dark(data):
+    for k, hexc in data["palette"].items():
+        r, g, b = (int(hexc[i:i + 2], 16) for i in (1, 3, 5))
+        if 0.2126 * r + 0.7152 * g + 0.0722 * b < 90:
+            data["palette"][k] = "#e6edf3"
+    return data
+
+
 # Sprites dibujados a mano para logos que pierden la forma al reducirlos
 HAND = {
     "docker": {"size": 16, "palette": {"b": "#2496ed", "e": "#0d1117"}, "rows": [
@@ -110,6 +122,8 @@ def main():
     HAND["ionic"] = ionic()
     for svg in sorted(SRC.glob("*.svg")):
         data = HAND.get(svg.stem) or pixelate(svg.stem)
+        if svg.stem in LIGHTEN_DARK:
+            data = lighten_dark(data)
         (OUT / f"{svg.stem}.json").write_text(json.dumps(data, indent=0), encoding="utf-8")
         print(f"{svg.stem}: {data['size']}x{data['size']}, {len(data['palette'])} colores")
 

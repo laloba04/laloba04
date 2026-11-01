@@ -12,54 +12,44 @@
   },
   "inventory": [
     [
-      "Java",
-      "java",
-      "#e76f00"
+      "PostgreSQL",
+      "postgresql",
+      "#336791"
     ],
     [
-      "Spring Boot",
-      "springboot",
-      "#6db33f"
+      "Firebase",
+      "firebase",
+      "#ffca28"
     ],
     [
-      "TypeScript",
-      "typescript",
-      "#3178c6"
+      "Supabase",
+      "supabase",
+      "#3ecf8e"
     ],
     [
-      "React",
-      "react",
-      "#61dafb"
+      "AWS",
+      "amazonwebservices",
+      "#ff9900"
     ],
     [
-      "Angular",
-      "angular",
-      "#dd0031"
+      "Google Cloud",
+      "googlecloud",
+      "#4285f4"
     ],
     [
-      "Ionic",
-      "ionic",
-      "#4e8ef7"
+      "Terraform",
+      "terraform",
+      "#7b42bc"
     ],
     [
-      "Python",
-      "python",
-      "#ffd43b"
+      "GitLab CI",
+      "gitlab",
+      "#fc6d26"
     ],
     [
-      "Docker",
-      "docker",
-      "#2496ed"
-    ],
-    [
-      "Kubernetes",
-      "kubernetes",
-      "#326ce5"
-    ],
-    [
-      "GH Actions",
-      "githubactions",
-      "#2088ff"
+      "Jenkins",
+      "jenkins",
+      "#d24939"
     ],
     [
       "SonarQube",
@@ -67,9 +57,19 @@
       "#4e9bcd"
     ],
     [
-      "PostgreSQL",
-      "postgresql",
-      "#336791"
+      "Figma",
+      "figma",
+      "#a259ff"
+    ],
+    [
+      "Git",
+      "git",
+      "#f05032"
+    ],
+    [
+      "Flask",
+      "flask",
+      "#e6edf3"
     ]
   ],
   "quests": [
@@ -269,7 +269,7 @@
       ],
       "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; control de acceso BLE con Raspberry Pi; RAG con ChromaDB en marcha.",
       "inv_title": "INVENTARIO",
-      "inv_alt": "Inventario de herramientas: Java, Spring Boot, TypeScript, React, Angular, Ionic, Python, Docker, Kubernetes, GitHub Actions, SonarQube y PostgreSQL.",
+      "inv_alt": "Inventario de herramientas: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Figma, Git y Flask.",
       "quests_title": "MISIONES",
       "status": {
         "done": "Completado",
@@ -431,7 +431,7 @@
       ],
       "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; BLE access control with a Raspberry Pi; RAG with ChromaDB in progress.",
       "inv_title": "INVENTORY",
-      "inv_alt": "Tool inventory: Java, Spring Boot, TypeScript, React, Angular, Ionic, Python, Docker, Kubernetes, GitHub Actions, SonarQube and PostgreSQL.",
+      "inv_alt": "Tool inventory: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Figma, Git and Flask.",
       "quests_title": "QUESTS",
       "status": {
         "done": "Completed",

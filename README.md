@@ -1,9 +1,7 @@
 <!-- Archivo generado por gen/build.py: edita data/profile.json y vuelve a generarlo. -->
+<p align="right"><a href="https://github.com/laloba04/laloba04/blob/main/README.en.md"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-lang.svg?v=1d6ade34" alt="Botón ENGLISH: cambia a la versión del perfil en inglés."></a></p>
+
 <div align="center">
-
-<a href="https://github.com/laloba04/laloba04/blob/main/README.en.md"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-lang.svg?v=1d6ade34" alt="Botón ENGLISH: cambia a la versión del perfil en inglés."></a>
-
-**Maria Bravo** · Desarrolladora Full Stack y Mobile junior · Barakaldo
 
 <picture>
   <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/hero.svg?v=730013af">
@@ -31,8 +29,8 @@
 </picture>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/inventory.svg?v=8fc93dc9">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/inventory.svg?v=4d298f7c" width="100%" alt="Inventario de herramientas: Java, Spring Boot, TypeScript, React, Angular, Ionic, Python, Docker, Kubernetes, GitHub Actions, SonarQube y PostgreSQL.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/inventory.svg?v=e9f3371c">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/inventory.svg?v=6728eecc" width="100%" alt="Inventario de herramientas: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Figma, Git y Flask.">
 </picture>
 
 <picture>
