@@ -64,11 +64,6 @@
       "#4e9bcd"
     ],
     [
-      "Figma",
-      "figma",
-      "#a259ff"
-    ],
-    [
       "Git",
       "git",
       "#f05032"
@@ -306,7 +301,7 @@
       ],
       "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; RAG con ChromaDB en marcha.",
       "inv_title": "INVENTARIO",
-      "inv_alt": "Inventario de herramientas: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Figma, Git y Flask.",
+      "inv_alt": "Inventario de herramientas: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Git y Flask.",
       "quests_title": "MISIONES",
       "status": {
         "done": "Completado",
@@ -474,7 +469,7 @@
       ],
       "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; team DAM final project: BLE access control with a Raspberry Pi; RAG with ChromaDB in progress.",
       "inv_title": "INVENTORY",
-      "inv_alt": "Tool inventory: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Figma, Git and Flask.",
+      "inv_alt": "Tool inventory: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Git and Flask.",
       "quests_title": "QUESTS",
       "status": {
         "done": "Completed",

@@ -24,8 +24,8 @@
 </picture>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/inventory.svg?v=569afce0">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/inventory.svg?v=7034b883" width="100%" alt="Inventario de herramientas: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Figma, Git y Flask.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/inventory.svg?v=7c1b2e96">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/inventory.svg?v=17147072" width="100%" alt="Inventario de herramientas: PostgreSQL, Firebase, Supabase, AWS, Google Cloud, Terraform, GitLab CI, Jenkins, SonarQube, Git y Flask.">
 </picture>
 
 <picture>
