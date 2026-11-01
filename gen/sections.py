@@ -4,7 +4,7 @@ import random
 
 from pixel import (AMBER, BG, BLUE, BORDER, CARD, GREEN, MOON, MUTED, NAMED, PANEL, PURPLE, ROOT, TXT,
                    WIDTH, fmt_int, frame, grid, rule, section, svg, t, wrap)
-from sprites import BLINK_CSS, HOWL, MOON as MOON_SPRITE, SCENE_CSS, TWINKLE_CSS, girl_head, girl_scene
+from sprites import big_text, big_width, BLINK_CSS, HOWL, MOON as MOON_SPRITE, SCENE_CSS, TWINKLE_CSS, girl_head, girl_scene
 
 CW = 0.6  # ancho de carácter en múltiplos del tamaño de diseño
 
@@ -68,6 +68,18 @@ def hero(d, lang, mode, cfg):
     stars_svg = "".join(f'<rect class="tw{i%3}" x="{sx}" y="{sy}" width="3" height="3" fill="{MOON}"/>'
                         for i, (sx, sy) in enumerate(stars))
     body.insert(1, stars_svg)
+    # cabecera: nombre en letras pixel grandes + subtítulo
+    name = cfg["name"].upper()
+    if mode == "desktop":
+        off, cell = 108, 6
+        head = (big_text(name, 24, 18, cell, TXT) + t(24, 92, d["subtitle"], 16, MUTED))
+    else:
+        off, cell = 96, 4
+        nx = (w - big_width(name, cell)) / 2
+        head = (big_text(name, nx, 16, cell, TXT) + t(w / 2, 76, d["subtitle"], 13, MUTED, anchor="middle"))
+    body = [f'<rect width="{w}" height="{h + off}" fill="{BG}"/>', head,
+            f'<g transform="translate(0 {off})">'] + body[1:] + ['</g>']
+    h += off
     css = (BLINK_CSS + TWINKLE_CSS + SCENE_CSS +
            ".cur{animation:cur 1s steps(1) infinite}@keyframes cur{50%{fill:transparent}}")
     return svg(w, h, "".join(body), d["hero_alt"], css)

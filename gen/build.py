@@ -25,9 +25,11 @@ def load_live():
     return live if live.get("updated") else None
 
 
-def cv_link(cfg):
-    """URL del CV, o None si es una ruta del repo que aún no existe (así el botón no aparece roto)."""
+def cv_link(cfg, lang="es"):
+    """URL del CV del idioma, o None si es una ruta del repo que aún no existe (así el botón no aparece roto)."""
     cv = cfg["links"].get("cv")
+    if isinstance(cv, dict):
+        cv = cv.get(lang)
     if not cv:
         return None
     if cv.startswith("http"):
@@ -53,7 +55,7 @@ def build():
         # botones: tamaño fijo, valen para PC y móvil
         write(base / "btn-lang.svg", S.button(d["lang_btn"], "lang"))
         for key in d["btn"]:
-            if key == "cv" and not cv_link(cfg):
+            if key == "cv" and not cv_link(cfg, lang):
                 continue
             write(base / f"btn-{key}.svg", S.button(d["btn"][key], key))
             count += 1
@@ -82,10 +84,11 @@ def build():
             count += len(files)
         import html
         write(ROOT / ("README.md" if lang == "es" else "README.en.md"),
-              readme(cfg, lang, bool(live), html.unescape(stats_alt), cv_link(cfg)))
+              readme(cfg, lang, bool(live), html.unescape(stats_alt), cv_link(cfg, lang)))
     print(f"{count} SVG generados" + ("" if live else " (sin datos vivos: data/live.json vacío)"))
-    if not cv_link(cfg):
-        print(f'Aviso: no está {cfg["links"].get("cv")}; el botón CV no se muestra hasta que lo subas')
+    for lang in cfg["lang"]:
+        if not cv_link(cfg, lang):
+            print(f"Aviso: no hay CV para '{lang}'; su botón no se muestra")
 
 
 if __name__ == "__main__":
