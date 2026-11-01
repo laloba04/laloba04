@@ -318,17 +318,17 @@ def achievements(d, lang, mode, cfg, live=None):
              t(tx0 + 16 + 9 * cell + 12, y, tag, fs, tcol)]
         for k, ln in enumerate(ls):
             g.append(t(text_x, y + k * (fs + 6), ln, fs, TXT if done else "#c9d1d9"))
-        body.append(f'<g class="pop" style="animation-delay:{0.6 + 0.35*i:.2f}s">' + "".join(g) + "</g>")
+        body.append(f'<g opacity="0"><set attributeName="opacity" to="1" begin="{0.6 + 0.35*i:.2f}s" fill="freeze"/>'
+                    + "".join(g) + "</g>")
         y += (len(ls) - 1) * (fs + 6)
     y += lh
     n = len(wrapped)
-    body.append(f'<g class="pop" style="animation-delay:{0.6 + 0.35*n:.2f}s">'
+    body.append(f'<g opacity="0"><set attributeName="opacity" to="1" begin="{0.6 + 0.35*n:.2f}s" fill="freeze"/>'
                 + t(tx0 + 16, y, "$", fs, PURPLE)
                 + f'<rect class="cur" x="{tx0 + 16 + 2*fs*CW:.0f}" y="{y-fs+2}" width="{fs*CW:.0f}" height="{fs+2}" fill="{GREEN}"/></g>')
     alt = d["ach_title"].capitalize() + ": " + "; ".join(
         (txt if done else f'{txt} ({d["ach_wip"].rstrip("…").lower()})') for done, txt in items) + "."
-    css = (".pop{opacity:0;animation:pop .3s steps(2) forwards}@keyframes pop{to{opacity:1}}"
-           ".cur{animation:cur 1s steps(1) infinite}@keyframes cur{50%{fill:transparent}}")
+    css = ".cur{animation:cur 1s steps(1) infinite}@keyframes cur{50%{fill:transparent}}"
     return svg(w, h, "".join(body), alt, css)
 
 
