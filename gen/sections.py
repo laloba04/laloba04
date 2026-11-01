@@ -83,15 +83,15 @@ BTN_ICONS = {
              "#wwww#wwww#", "#wwwwwwwww#", "###########"],
     "download": ["....#....", "....#....", "....#....", "..#.#.#..", "...###...", "....#....",
                  ".........", "#.......#", "#########"],
-    "lang": [".....#...", ".....##..", "########.", ".....##..", ".....#...", ".........",
-             "...#.....", "..##.....", ".########", "..##.....", "...#....."],
 }
+BTN_ICONS["globe"] = ["..#####..", ".#..#..#.", "#########", "#..#.#..#", "#########",
+                      "#..#.#..#", "#########", ".#..#..#.", "..#####.."]
 BUTTON_STYLE = {  # clave: (relleno, sombra, icono) — colores de la paleta del perfil
     "portfolio": ("#f5a524", "#9a5f00", "play"),      # ámbar (ojos del lobo)
     "linkedin": ("#a371f7", "#5b2fa8", "linkedin"),   # lila (sudadera)
     "email": ("#f0e6c8", "#a39470", "mail"),          # luna
     "cv": ("#db61a2", "#8a2a5e", "download"),         # rosa (orejas del lobito)
-    "lang": ("#8b949e", "#484f58", "lang"),           # gris lobo
+    "lang": ("#c9d1d9", "#6e7681", "globe"),          # gris claro con globo
 }
 INK = "#0d1117"
 
@@ -117,102 +117,146 @@ def button(label, key):
 
 
 # ---------- Ficha de personaje ----------
-def _xp_bar(body, x, y, wbar, label_x=None, label_y=None):
-    seg = wbar / 10
-    body.append(f'<rect x="{x}" y="{y-12}" width="{wbar}" height="16" fill="{BORDER}"/>')
-    body.append(f'<rect x="{x}" y="{y-12}" width="0" height="16" fill="{AMBER}">'
-                f'<animate attributeName="width" from="0" to="{seg*3.5:.0f}" begin="0.4s" dur="1.6s" fill="freeze"/></rect>')
-    for i in range(1, 10):
-        body.append(f'<rect x="{x+i*seg:.0f}" y="{y-12}" width="2" height="16" fill="{BG}"/>')
-    body.append(t(label_x if label_x is not None else x + wbar + 14,
-                  label_y if label_y is not None else y + 2, "JUNIOR → ???", 14, AMBER))
+HEART = [".##.##.", "#######", "#######", ".#####.", "..###..", "...#..."]
 
 
-def sheet(d, lang, mode, cfg):
+def _hearts(x, y, value, cell=2, total=3):
+    """Corazones pixel: llenos, medio y vacíos (value admite .5)."""
+    out = []
+    for i in range(total):
+        hx = x + i * (8 * cell)
+        fill = min(max(value - i, 0), 1)
+        out.append(grid(HEART, {"#": "#30363d"}, hx, y, cell))
+        if fill >= 1:
+            out.append(grid(HEART, {"#": "#f85149"}, hx, y, cell))
+        elif fill > 0:
+            out.append(grid([r[:4] for r in HEART], {"#": "#f85149"}, hx, y, cell))
+    return "".join(out)
+
+
+def _skill_rows(body, langs, x_label, x_bar, bar_w, x_pct, y, lang, segs, fs=14):
+    top = max((l_["pct"] for l_ in langs), default=1)
+    sw = bar_w / segs
+    for l_ in langs:
+        body.append(t(x_label, y, l_["name"].upper(), fs, TXT))
+        filled = max(1, round(segs * l_["pct"] / top))
+        for k in range(segs):
+            col = l_["color"] if k < filled else "#21262d"
+            body.append(f'<rect x="{x_bar + k*sw:.1f}" y="{y-12}" width="{sw-3:.1f}" height="13" fill="{col}"/>')
+        pct = f'{l_["pct"]:.1f}'.replace(".", "," if lang == "es" else ".")
+        body.append(t(x_pct, y, f"{pct} %" if lang == "es" else f"{pct}%", fs, TXT, anchor="end"))
+        y += 26
+    return y
+
+
+def _exp(body, d, lang, live, x, y, wbar, fs=15):
+    frac = min(live["active_days"] / 365, 1)
+    body.append(f'<rect x="{x}" y="{y}" width="{wbar}" height="16" fill="#21262d"/>')
+    body.append(f'<rect x="{x}" y="{y}" width="0" height="16" fill="{GREEN}">'
+                f'<animate attributeName="width" from="0" to="{wbar*frac:.0f}" begin="0.3s" dur="1.6s" fill="freeze"/></rect>')
+    body.append(f'<rect x="{x}" y="{y}" width="{wbar}" height="3" fill="#ffffff" opacity=".08"/>')
+    body.append(t(x, y + 40, "EXP", fs, GREEN))
+    body.append(t(x + fs * 3, y + 40, d["exp"].format(total=fmt_int(live["total"], lang), active=live["active_days"]), fs, TXT))
+
+
+def sheet(d, lang, mode, cfg, live=None):
     w = WIDTH[mode]
     rows = d["sheet"]
+    langs = (live or {}).get("languages", [])[:6]
+    name = cfg["name"].upper()
     if mode == "desktop":
-        h = 70 + len(rows) * 34 + 62
-        body, pad = section(w, h, d["sheet_title"])
-        body.append(rule(48, w - 200))
-        body.append(girl_head(w - 48 - 14 * 5, 14, 5))
-        y = 94
-        for k, v in rows:
-            body.append(t(48, y, k, 14, MUTED))
-            body.append(t(210, y, v, 15, TXT))
-            y += 34
-        body.append(t(48, y + 2, "XP", 14, MUTED))
-        _xp_bar(body, 210, y, 400)
-    else:
-        x0, maxc = 36, 38
+        xv, maxc = 390, 52
         blocks = [(k, wrap(v, maxc)) for k, v in rows]
-        h = 80 + sum(20 + 20 * len(ls) + 12 for _, ls in blocks) + 86
+        info_h = 50 + sum(26 * len(ls) for _, ls in blocks) + 34
+        top = 76
+        h = top + max(info_h, 230) + (80 + 34 + 26 * len(langs) if live else 0) + 30
         body, pad = section(w, h, d["sheet_title"])
-        body.append(rule(x0, w - 2 * x0 - 70))
-        body.append(girl_head(w - x0 - 14 * 4, 14, 4))
-        y = 92
+        body.append(rule(48, w - 96))
+        body.append(frame(48, top + 6, 214, 200, fill="#0b0f14", stroke=BORDER, px=3))
+        body.append(girl_scene(57, top + 50, 6))
+        body.append(t(282, top + 34, name, 26, TXT))
+        y = top + 72
+        for k, ls in blocks:
+            body.append(t(282, y, k, 14, MUTED))
+            for ln in ls:
+                body.append(t(xv, y, ln, 15, TXT))
+                y += 26
+        body.append(t(282, y + 4, d["langs_label"], 14, MUTED))
+        hx = xv
+        for code, val in cfg["hearts"]:
+            body.append(t(hx, y + 4, code, 15, TXT))
+            body.append(_hearts(hx + 28, y - 9, val))
+            hx += 120
+        y = top + max(info_h, 230) + 6
+        if live:
+            _exp(body, d, lang, live, 48, y, w - 96)
+            y += 84
+            body.append(t(48, y, d["skills"], 17, MUTED))
+            _skill_rows(body, langs, 48, 220, 500, w - 48, y + 34, lang, 20)
+    else:
+        x0, maxc = 30, 40
+        blocks = [(k, wrap(v, maxc)) for k, v in rows]
+        h = (76 + 150 + 40 + sum(20 + 20 * len(ls) + 10 for _, ls in blocks) + 70
+             + (90 + 30 + 24 * len(langs) if live else 0) + 20)
+        body, pad = section(w, h, d["sheet_title"])
+        body.append(rule(x0, w - 2 * x0))
+        body.append(frame((w - 190) / 2, 76, 190, 140, fill="#0b0f14", stroke=BORDER, px=3))
+        body.append(girl_scene((w - 160) / 2, 98, 5))
+        body.append(t(w / 2, 250, name, 22, TXT, anchor="middle"))
+        y = 286
         for k, ls in blocks:
             body.append(t(x0, y, k, 12, MUTED))
             y += 20
             for ln in ls:
                 body.append(t(x0, y, ln, 14, TXT))
                 y += 20
-            y += 12
-        body.append(t(x0, y, "XP", 12, MUTED))
-        _xp_bar(body, x0, y + 24, w - 2 * x0, label_x=x0, label_y=y + 50)
-    return svg(w, h, "".join(body), d["sheet_alt"])
+            y += 10
+        body.append(t(x0, y, d["langs_label"], 12, MUTED))
+        y += 24
+        hx = x0
+        for code, val in cfg["hearts"]:
+            body.append(t(hx, y, code, 14, TXT))
+            body.append(_hearts(hx + 26, y - 11, val))
+            hx += 118
+        y += 30
+        if live:
+            _exp(body, d, lang, live, x0, y, w - 2 * x0, fs=12)
+            y += 80
+            body.append(t(x0, y, d["skills"], 15, MUTED))
+            _skill_rows(body, langs, x0, 140, 200, w - x0, y + 30, lang, 10, fs=12)
+    alt = d["sheet_alt"]
+    if live:
+        alt += d["sheet_live_alt"].format(total=fmt_int(live["total"], lang), active=live["active_days"],
+                                          langs=", ".join(f'{l_["name"]} {l_["pct"]} %' for l_ in langs))
+    css = BLINK_CSS + SCENE_CSS
+    return svg(w, h, "".join(body), alt, css)
 
 
-# ---------- Puntuación (datos vivos de GitHub) ----------
+# ---------- High score (datos vivos de GitHub) ----------
 def stats(d, lang, mode, cfg, live):
     w = WIDTH[mode]
     desk = mode == "desktop"
-    values = [live["total"], live["active_days"], live["current_streak"], live["longest_streak"]]
-    langs = live.get("languages", [])[:6]
-    cols = 4 if desk else 2
-    box_h = 84
-    nrows = 4 // cols
-    legend_rows = (len(langs) + (2 if desk else 1)) // (3 if desk else 2)
-    h = 80 + nrows * (box_h + 12) + 40 + 26 + legend_rows * 22 + 40
+    values = [live["current_streak"], live["longest_streak"], live["best_day"]]
+    cols = 3 if desk else 1
+    box_h = 74
+    nrows = 3 // cols
+    h = 80 + nrows * (box_h + 10) + 30
     body, pad = section(w, h, d["stats_title"])
     x_in = pad + 24
     body.append(rule(x_in, w - 2 * x_in))
     gap = 12
     bw = (w - 2 * x_in - (cols - 1) * gap) / cols
-    for i, (label, val) in enumerate(zip(d["stats_labels"], values)):
+    for i, (label, val, unit, one) in enumerate(zip(d["stats_labels"], values, d["stats_units"],
+                                                    d["stats_units_one"])):
+        unit = one if val == 1 else unit
         c, r = i % cols, i // cols
-        x, y = x_in + c * (bw + gap), 76 + r * (box_h + 12)
+        x, y = x_in + c * (bw + gap), 76 + r * (box_h + 10)
         body.append(frame(x, y, bw, box_h, fill=CARD, stroke=BORDER, px=3))
-        num = fmt_int(val, lang) + (f" {d['stats_days']}" if i >= 2 else "")
-        body.append(t(x + bw / 2, y + 40, num, 22 if desk else 20, AMBER, anchor="middle"))
-        body.append(t(x + bw / 2, y + 62, label, 11, TXT, anchor="middle"))
-        if i == 0:
-            body.append(t(x + bw / 2, y + 76, d["stats_sub"], 10, MUTED, anchor="middle"))
-    y = 76 + nrows * (box_h + 12) + 18
-    body.append(t(x_in, y, d["stats_langs"], 12, MUTED))
-    y += 14
-    barw = w - 2 * x_in
-    total = sum(l_["pct"] for l_ in langs) or 1
-    xx = x_in
-    for l_ in langs:
-        seg = barw * l_["pct"] / total
-        body.append(f'<rect x="{xx:.1f}" y="{y}" width="{seg:.1f}" height="14" fill="{l_["color"]}"/>')
-        xx += seg
-    for i in range(1, int(barw // 8)):
-        body.append(f'<rect x="{x_in + i*8}" y="{y}" width="1" height="14" fill="{BG}" opacity=".35"/>')
-    y += 36
-    per = 3 if desk else 2
-    colw = barw / per
-    for i, l_ in enumerate(langs):
-        c, r = i % per, i // per
-        lx, ly = x_in + c * colw, y + r * 22
-        body.append(f'<rect x="{lx}" y="{ly-10}" width="10" height="10" fill="{l_["color"]}"/>')
-        pct = f'{l_["pct"]:.1f}'.replace(".", "," if lang == "es" else ".")
-        body.append(t(lx + 18, ly, f'{l_["name"]} {pct} %' if lang == "es" else f'{l_["name"]} {pct}%', 13, TXT))
-    y += legend_rows * 22 + 6
-    body.append(t(w - x_in, y, f'{d["stats_updated"]}: {live["updated"]}', 11, MUTED, anchor="end"))
-    alt = d["stats_alt"].format(total=fmt_int(values[0], lang), active=values[1], current=values[2],
-                                longest=values[3], langs=", ".join(l_["name"] for l_ in langs))
+        body.append(t(x + bw / 2, y + 36, f"{fmt_int(val, lang)} {unit}", 22 if desk else 20, AMBER, anchor="middle"))
+        body.append(t(x + bw / 2, y + 60, label, 11, MUTED, anchor="middle"))
+    body.append(t(w - x_in, h - 22, f'{"actualizado" if lang == "es" else "updated"}: {live["updated"]}',
+                  10, MUTED, anchor="end"))
+    alt = d["stats_alt"].format(current=values[0], longest=values[1], best=values[2])
     return svg(w, h, "".join(body), alt)
 
 
@@ -281,40 +325,65 @@ def inventory(d, lang, mode, cfg):
 
 
 # ---------- Misiones ----------
+QUEST_ICONS = {  # 12x12, '.' transparente
+    "skyfence": (["....####....", "...######...", "..###..###..", "..##....##..", "..###..###..", "...######...",
+                  "....####....", ".....##.....", ".....##.....", "..#..##..#..", ".#........#.", "..########.."],
+                 {"#": "#f5a524"}),
+    "casinoctf": (["##########..", "#wwwwwwww#..", "#w..rr..w#..", "#w.rrrr.w#..", "#wrrrrrrw#..", "#wrrrrrrw#..",
+                   "#w..rr..w#..", "#w.rrrr.w#..", "#wwwwwwww#..", "##########..", "...........#", "..........##"],
+                  {"#": "#db61a2", "w": "#f0e6c8", "r": "#db61a2"}),
+    "secaudit": (["....####....", "..########..", ".##########.", ".###ggggg##.", ".##g####g##.", ".###g##g###.",
+                  ".####gg####.", "..########..", "..########..", "...######...", "....####....", ".....##....."],
+                 {"#": "#3fb950", "g": "#0d1117"}),
+    "habitflow": ([".#..#..#..#.", "############", "#..........#", "#.##.##.##.#", "#.##.##.##.#", "#..........#",
+                   "#.##.##..p.#", "#.##.##.pp.#", "#......pp..#", "#.pp.pp....#", "#..........#", "############"],
+                  {"#": "#a371f7", "p": "#3fb950"}),
+    "control-acceso-ble": (["...####.....", "..#....#....", "..#....#....", "..#....#....", ".########...", ".##bbbb##...",
+                            ".#b#bb#b#...", ".#bb##bb#...", ".#b#bb#b#...", ".##bbbb##...", ".########...", "............"],
+                           {"#": "#58a6ff", "b": "#c9d1d9"}),
+    "rag-notas": (["#######.....", "#wwwww##....", "#w...w#w#...", "#wwwww#ww#..", "#w....###...", "#wwww#ooo#..",
+                   "#w..#o...o#.", "#www#o...o#.", "#w..#o...o#.", "####.#ooo##.", ".......#####", "........###."],
+                  {"#": "#f0e6c8", "w": "#30363d", "o": "#f5a524"}),
+}
+STAR = ["...#...", "...#...", "#######", ".#####.", "..###..", ".##.##.", "##...##"]
+CARD_W = 412
+
+
 def quests_title(d, lang, mode, cfg):
     w = WIDTH[mode]
-    h = 60
+    h = 64
     pad = 24 if mode == "desktop" else 12
-    tw_ = len(d["quests_title"]) * 14 + 70
     body = [f'<rect width="{w}" height="{h}" fill="{BG}"/>',
-            f'<rect x="{pad}" y="28" width="{w-2*pad}" height="4" fill="{BORDER}"/>',
-            f'<rect x="{(w-tw_)/2}" y="12" width="{tw_}" height="36" fill="{BG}"/>',
-            t(w / 2, 38, "⚔ " + d["quests_title"] + " ⚔", 22 if mode == "desktop" else 20, AMBER, anchor="middle")]
+            frame(pad, 8, w - 2 * pad, h - 16, fill=PANEL, stroke=BORDER),
+            t(pad + 24, 41, "▸ " + d["quests_title"], 18 if mode == "desktop" else 16, AMBER)]
     return svg(w, h, "".join(body), d["quests_title"])
 
 
 def quest(d, lang, mode, cfg, q):
-    w = WIDTH[mode]
-    pad = 24 if mode == "desktop" else 12
-    desc, color = q[lang], NAMED[q["color"]]
-    label = d["status"][q["status"]]
-    stc = GREEN if q["status"] == "done" else AMBER
-    lw = len(label) * 12 * CW + 22
-    lines = [desc] if mode == "desktop" else wrap(desc, 40)
-    h = 112 if mode == "desktop" else 100 + 20 * len(lines)
-    cw_ = w - 2 * pad
+    """Tarjeta de misión. Mide 412 px: en PC caben dos por fila y en móvil ocupa todo el ancho."""
+    w, h = CARD_W, 200
+    color = NAMED[q["color"]]
+    lines = wrap(q[lang], 42)[:2]
     body = [f'<rect width="{w}" height="{h}" fill="{BG}"/>',
-            frame(pad, 4, cw_, h - 8, fill=PANEL, stroke=color),
-            f'<rect x="{pad+4}" y="8" width="8" height="{h-16}" fill="{color}" opacity=".5"/>',
-            t(pad + 28, 40, q["name"], 20, color),
-            frame(pad + cw_ - 16 - lw, 20, lw, 26, fill=BG, stroke=stc, px=2),
-            t(pad + cw_ - 16 - lw / 2, 38, label, 12, stc, anchor="middle")]
-    y = 68
+            f'<rect x="2" y="2" width="{w-4}" height="{h-4}" fill="none" stroke="{color}" stroke-width="3"/>',
+            f'<rect x="9" y="9" width="{w-18}" height="{h-18}" fill="{PANEL}" stroke="{color}" stroke-width="2" opacity="1"/>']
+    rows, pal = QUEST_ICONS[q["slug"]]
+    body.append(grid(rows, pal, 26, 26, 3))
+    body.append(t(72, 50, q["name"], 19, color))
+    if q.get("featured"):
+        body.append(grid(STAR, {"#": "#f5a524"}, 72 + len(q["name"]) * 19 * CW + 10, 36, 2))
+    y = 92
     for ln in lines:
-        body.append(t(pad + 28, y, ln, 14, TXT))
-        y += 20
-    body.append(t(pad + 28, y + 6, q["stack"], 12, MUTED))
-    return svg(w, h, "".join(body), f'{q["name"]} — {desc} ({q["stack"]})')
+        body.append(t(26, y, ln, 14, TXT))
+        y += 22
+    body.append(t(26, 146, q["stack"], 12, MUTED))
+    label = d["status"][q["status"]]
+    dot = GREEN if q["status"] == "done" else AMBER
+    cw_ = 26 + len(label) * 13 * CW + 16
+    body.append(f'<rect x="26" y="158" width="{cw_:.0f}" height="26" fill="#21262d"/>')
+    body.append(f'<rect x="34" y="166" width="10" height="10" fill="{dot}"/>')
+    body.append(t(52, 176, label, 13, TXT))
+    return svg(w, h, "".join(body), f'{q["name"]} — {q[lang]} ({q["stack"]}). {label}.')
 
 
 def quests_more(d, lang, mode, cfg):
@@ -324,7 +393,8 @@ def quests_more(d, lang, mode, cfg):
     h = 56
     body = [f'<rect width="{w}" height="{h}" fill="{BG}"/>',
             frame(pad, 6, w - 2 * pad, h - 12, fill=PANEL, stroke=BORDER),
-            t(w / 2, 34, "» " + txt + " «", 14 if mode == "desktop" else 13, TXT, anchor="middle")]
+            grid(["#...", "##..", "###.", "####", "###.", "##..", "#..."], {"#": GREEN}, w / 2 - len(txt) * 13 * CW / 2 - 18, 21, 2),
+            t(w / 2 + 6, 34, txt, 13, BLUE, anchor="middle")]
     return svg(w, h, "".join(body), d["quest_more"])
 
 

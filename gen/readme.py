@@ -21,8 +21,10 @@ def readme(cfg, lang, has_stats, stats_alt="", cv=None):
     def linked(href, inner):
         return f'<a href="{href}">\n{inner}\n</a>'
 
-    quests = "\n\n".join(
-        linked(links["portfolio"], pic(f'quest-{q["slug"]}.svg', f'{q["name"]} — {q[lang]} ({q["stack"]})'))
+    # tarjetas de 412 px sin ancho fijo: dos por fila en PC, una por fila en móvil
+    quests = "\n".join(
+        f'<a href="{q.get("url", links["portfolio"])}"><img src="{a}/quest-{q["slug"]}.svg" '
+        f'alt="{esc(q["name"])} — {esc(q[lang])} ({esc(q["stack"])})"></a>'
         for q in cfg["quests"])
 
     parts = [

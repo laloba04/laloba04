@@ -36,6 +36,8 @@ def check():
         w = int(float(root.get("width")))
         if p.name.startswith("btn-"):
             expected = w  # los botones miden según su texto
+        elif p.name.startswith("quest-"):
+            expected = 412  # tarjetas: dos por fila en PC, una en móvil
         else:
             expected = 420 if p.parent.name == "mobile" else 900
         if w != expected:
@@ -54,7 +56,7 @@ def check():
             errors.append(f"{names[0]} y {other} no tienen los mismos archivos: {sorted(diff)}")
     for lang, files in sets.items():
         for f in files:
-            if "/" not in f and not f.startswith("btn-") and f"mobile/{f}" not in files:
+            if "/" not in f and not f.startswith(("btn-", "quest-")) and f"mobile/{f}" not in files:
                 errors.append(f"assets/{lang}/{f}: falta la versión móvil")
 
     for readme in ("README.md", "README.en.md"):

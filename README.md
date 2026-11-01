@@ -16,12 +16,12 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, unos 13 meses en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
 </picture>
 
 <picture>
   <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/stats.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/stats.svg" width="100%" alt="Puntuación del último año en GitHub: 605 contribuciones, 105 días activos, racha actual de 1 días y mejor racha de 6 días. Lenguajes en mis repos: TypeScript, JavaScript, Python, Swift, Java, CSS.">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/stats.svg" width="100%" alt="High score en GitHub: racha actual de 1 días, mejor racha de 6 días y récord de 39 contribuciones en un día.">
 </picture>
 
 <picture>
@@ -39,47 +39,12 @@
   <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quests-title.svg" width="100%" alt="MISIONES">
 </picture>
 
-<a href="https://mariaba.pages.dev">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-skyfence.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-skyfence.svg" width="100%" alt="SkyFence — Geovallas en tiempo real con pipeline DevSecOps. (Java 17 · Spring Boot · React · WebSocket)">
-</picture>
-</a>
-
-<a href="https://mariaba.pages.dev">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-casinoctf.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-casinoctf.svg" width="100%" alt="CasinoCTF — Un casino con 9 retos OWASP para practicar seguridad web. (React · Flask · PostgreSQL · PWA)">
-</picture>
-</a>
-
-<a href="https://mariaba.pages.dev">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-secaudit.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-secaudit.svg" width="100%" alt="SecAudit — Análisis de CVEs con informes en PDF y HTML. (Python · Go · React)">
-</picture>
-</a>
-
-<a href="https://mariaba.pages.dev">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-control-acceso-ble.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-control-acceso-ble.svg" width="100%" alt="Control de Acceso BLE — Control de acceso por Bluetooth (BLE) desde el móvil. (React Native · Firebase · Raspberry Pi)">
-</picture>
-</a>
-
-<a href="https://mariaba.pages.dev">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-habitflow.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-habitflow.svg" width="100%" alt="HabitFlow — App de hábitos serverless con bot de Telegram. (Angular · Ionic · AWS Lambda · DynamoDB)">
-</picture>
-</a>
-
-<a href="https://mariaba.pages.dev">
-<picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-rag-notas.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-rag-notas.svg" width="100%" alt="rag-notas — Preguntas en lenguaje natural sobre mis apuntes (RAG). (Python · ChromaDB · sentence-transformers)">
-</picture>
-</a>
+<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-skyfence.svg" alt="SkyFence — Geovallas en tiempo real con pipeline DevSecOps. (Java 17 · Spring Boot · React · WebSocket)"></a>
+<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-casinoctf.svg" alt="CasinoCTF — Un casino con 9 retos OWASP para practicar seguridad web. (React · Flask · PostgreSQL · PWA)"></a>
+<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-secaudit.svg" alt="SecAudit — Análisis de CVEs con informes en PDF y HTML. (Python · Go · React)"></a>
+<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-control-acceso-ble.svg" alt="Control de Acceso BLE — Control de acceso por Bluetooth (BLE) desde el móvil. (React Native · Firebase · Raspberry Pi)"></a>
+<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-habitflow.svg" alt="HabitFlow — App de hábitos serverless con bot de Telegram. (Angular · Ionic · AWS Lambda · DynamoDB)"></a>
+<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-rag-notas.svg" alt="rag-notas — Preguntas en lenguaje natural sobre mis apuntes (RAG). (Python · ChromaDB · sentence-transformers)"></a>
 
 <a href="https://mariaba.pages.dev">
 <picture>

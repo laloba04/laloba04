@@ -63,7 +63,7 @@ def build():
             folder = base if mode == "desktop" else base / "mobile"
             files = {
                 "hero.svg": S.hero(d, lang, mode, cfg),
-                "sheet.svg": S.sheet(d, lang, mode, cfg),
+                "sheet.svg": S.sheet(d, lang, mode, cfg, live),
                 "achievements.svg": S.achievements(d, lang, mode, cfg),
                 "inventory.svg": S.inventory(d, lang, mode, cfg),
                 "quests-title.svg": S.quests_title(d, lang, mode, cfg),
@@ -74,8 +74,9 @@ def build():
             if live:
                 files["stats.svg"] = S.stats(d, lang, mode, cfg, live)
                 stats_alt = re.search(r'aria-label="([^"]*)"', files["stats.svg"]).group(1)
-            for q in cfg["quests"]:
-                files[f'quest-{q["slug"]}.svg'] = S.quest(d, lang, mode, cfg, q)
+            if mode == "desktop":  # las tarjetas de misión valen igual para PC y móvil
+                for q in cfg["quests"]:
+                    files[f'quest-{q["slug"]}.svg'] = S.quest(d, lang, mode, cfg, q)
             for name, content in files.items():
                 write(folder / name, content)
             count += len(files)
