@@ -2,7 +2,10 @@
   "user": "laloba04",
   "name": "Maria Bravo",
   "links": {
-    "portfolio": "https://mariaba.pages.dev",
+    "portfolio": {
+      "es": "https://mariaba.pages.dev",
+      "en": "https://mariaba.pages.dev/en/"
+    },
     "linkedin": "https://www.linkedin.com/in/maria-bravo-angulo",
     "email": "mba.maria08@gmail.com",
     "cv": {
@@ -83,7 +86,10 @@
       "en": "Real-time geofencing with a DevSecOps pipeline.",
       "featured": true,
       "show": true,
-      "url": "https://mariaba.pages.dev/proyectos/skyfence/"
+      "url": {
+        "es": "https://mariaba.pages.dev/proyectos/skyfence/",
+        "en": "https://mariaba.pages.dev/en/projects/skyfence/"
+      }
     },
     {
       "slug": "casinoctf",
@@ -95,7 +101,10 @@
       "en": "A casino with 9 OWASP challenges to practise web security.",
       "featured": true,
       "show": true,
-      "url": "https://mariaba.pages.dev/proyectos/casinoctf/"
+      "url": {
+        "es": "https://mariaba.pages.dev/proyectos/casinoctf/",
+        "en": "https://mariaba.pages.dev/en/projects/casinoctf/"
+      }
     },
     {
       "slug": "secaudit",
@@ -107,7 +116,10 @@
       "en": "CVE analysis with PDF and HTML reports.",
       "featured": false,
       "show": true,
-      "url": "https://mariaba.pages.dev/proyectos/secaudit/"
+      "url": {
+        "es": "https://mariaba.pages.dev/proyectos/secaudit/",
+        "en": "https://mariaba.pages.dev/en/projects/secaudit/"
+      }
     },
     {
       "slug": "rag-notas",
@@ -119,7 +131,10 @@
       "en": "Ask my study notes questions in plain language (RAG).",
       "featured": false,
       "show": true,
-      "url": "https://mariaba.pages.dev/proyectos/rag-notas/"
+      "url": {
+        "es": "https://mariaba.pages.dev/proyectos/rag-notas/",
+        "en": "https://mariaba.pages.dev/en/projects/rag-notas/"
+      }
     },
     {
       "slug": "habitflow",
@@ -131,7 +146,10 @@
       "en": "Serverless habit tracker with a Telegram bot.",
       "featured": false,
       "show": false,
-      "url": "https://mariaba.pages.dev/proyectos/habitflow/"
+      "url": {
+        "es": "https://mariaba.pages.dev/proyectos/habitflow/",
+        "en": "https://mariaba.pages.dev/en/projects/habitflow/"
+      }
     },
     {
       "slug": "control-acceso-ble",
@@ -143,7 +161,10 @@
       "en": "Bluetooth (BLE) access control from your phone.",
       "featured": false,
       "show": false,
-      "url": "https://mariaba.pages.dev/proyectos/control-acceso-ble/"
+      "url": {
+        "es": "https://mariaba.pages.dev/proyectos/control-acceso-ble/",
+        "en": "https://mariaba.pages.dev/en/projects/control-acceso-ble/"
+      }
     }
   ],
   "lang": {

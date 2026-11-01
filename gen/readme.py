@@ -11,7 +11,9 @@ MOBILE_QUERY = "(max-width: 600px)"
 
 def readme(cfg, lang, has_stats, stats_alt="", cv=None):
     d = cfg["lang"][lang]
-    user, links = cfg["user"], cfg["links"]
+    user, links = cfg["user"], dict(cfg["links"])
+    # enlaces que pueden tener versión por idioma: {"es": ..., "en": ...}
+    links = {k: (v.get(lang) if isinstance(v, dict) else v) for k, v in links.items()}
     other = "README.en.md" if lang == "es" else "README.md"
     a = f"https://github.com/{user}/{user}/raw/main/assets/{lang}"
     blob = f"https://github.com/{user}/{user}/blob/main"
@@ -28,7 +30,7 @@ def readme(cfg, lang, has_stats, stats_alt="", cv=None):
 
     # tarjetas de 412 px sin ancho fijo: dos por fila en PC, una por fila en móvil
     quests = "\n".join(
-        f'<a href="{q.get("url", links["portfolio"])}"><img src="{a}/quest-{q["slug"]}.svg" '
+        f'<a href="{(q["url"].get(lang) if isinstance(q.get("url"), dict) else q.get("url")) or links["portfolio"]}"><img src="{a}/quest-{q["slug"]}.svg" '
         f'alt="{esc(q["name"])} — {esc(q[lang])} ({esc(q["stack"])})"></a>'
         for q in cfg["quests"] if q.get("show", True))
 

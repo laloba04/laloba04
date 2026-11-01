@@ -8,7 +8,7 @@
   <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/hero.svg?v=6694cfc2" width="100%" alt="Maria Bravo, Full Stack and Mobile developer in Bilbao, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic and React Native; devops with Docker, Kubernetes and GitHub Actions; and status: open to work, available now.">
 </picture>
 
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-portfolio.svg?v=802bd554" alt="PORTFOLIO"></a>
+<a href="https://mariaba.pages.dev/en/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-portfolio.svg?v=802bd554" alt="PORTFOLIO"></a>
 <a href="https://www.linkedin.com/in/maria-bravo-angulo"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-linkedin.svg?v=215ba83f" alt="LINKEDIN"></a>
 <a href="mailto:mba.maria08@gmail.com"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-email.svg?v=b98e6af6" alt="EMAIL"></a>
 <a href="https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv-en.pdf"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-cv.svg?v=e5279a9d" alt="CV"></a>
@@ -38,12 +38,12 @@
   <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quests-title.svg?v=9bcf3dfc" width="100%" alt="QUESTS">
 </picture>
 
-<a href="https://mariaba.pages.dev/proyectos/skyfence/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-skyfence.svg?v=51cb4ed7" alt="SkyFence — Real-time geofencing with a DevSecOps pipeline. (Java 17 · Spring Boot · React · WebSocket)"></a>
-<a href="https://mariaba.pages.dev/proyectos/casinoctf/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-casinoctf.svg?v=26b2a7e4" alt="CasinoCTF — A casino with 9 OWASP challenges to practise web security. (React · Flask · PostgreSQL · PWA)"></a>
-<a href="https://mariaba.pages.dev/proyectos/secaudit/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-secaudit.svg?v=3e6cd42a" alt="SecAudit — CVE analysis with PDF and HTML reports. (Python · Go · React)"></a>
-<a href="https://mariaba.pages.dev/proyectos/rag-notas/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-rag-notas.svg?v=e034c134" alt="rag-notas — Ask my study notes questions in plain language (RAG). (Python · ChromaDB · sentence-transformers)"></a>
+<a href="https://mariaba.pages.dev/en/projects/skyfence/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-skyfence.svg?v=51cb4ed7" alt="SkyFence — Real-time geofencing with a DevSecOps pipeline. (Java 17 · Spring Boot · React · WebSocket)"></a>
+<a href="https://mariaba.pages.dev/en/projects/casinoctf/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-casinoctf.svg?v=26b2a7e4" alt="CasinoCTF — A casino with 9 OWASP challenges to practise web security. (React · Flask · PostgreSQL · PWA)"></a>
+<a href="https://mariaba.pages.dev/en/projects/secaudit/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-secaudit.svg?v=3e6cd42a" alt="SecAudit — CVE analysis with PDF and HTML reports. (Python · Go · React)"></a>
+<a href="https://mariaba.pages.dev/en/projects/rag-notas/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-rag-notas.svg?v=e034c134" alt="rag-notas — Ask my study notes questions in plain language (RAG). (Python · ChromaDB · sentence-transformers)"></a>
 
-<a href="https://mariaba.pages.dev">
+<a href="https://mariaba.pages.dev/en/">
 <picture>
   <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/quests-more.svg?v=53093bbe">
   <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quests-more.svg?v=1b8f2cfa" width="100%" alt="More quests at mariaba.pages.dev">
