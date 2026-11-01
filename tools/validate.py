@@ -61,7 +61,7 @@ def check():
 
     for readme in ("README.md", "README.en.md"):
         text = (ROOT / readme).read_text(encoding="utf-8")
-        for m in re.findall(r'/raw/main/(assets/[^"]+\.svg)', text):
+        for m in re.findall(r'/raw/main/(assets/[^"?]+\.svg)', text):
             if not (ROOT / m).exists():
                 errors.append(f"{readme}: enlaza {m}, que no existe")
     return errors
