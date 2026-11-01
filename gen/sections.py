@@ -32,7 +32,7 @@ def _terminal(body, d, lang, mode, tx, ty, tw, th, fsize, lh):
         body.append(f'<clipPath id="{cid}"><rect x="{tx+14}" y="{y-fsize-2}" width="0" height="{fsize+8}">'
                     f'<animate attributeName="width" begin="{delay:.2f}s" '
                     f'dur="{dur:.2f}s" fill="freeze" calcMode="discrete" '
-                    f'values="{";".join(str(round(k * cw + 2)) for k in range(chars + 2))}"/></rect></clipPath>')
+                    f'values="{";".join([str(round(k * cw + 2)) for k in range(chars + 2)] + [str(tw - 20)])}"/></rect></clipPath>')
         body.append(f'<g clip-path="url(#{cid})">'
                     + t(tx + 16, y, p, fsize, PREFIX_COLOR.get(p, MUTED))
                     + t(tx + 16 + 2 * cw, y, line, fsize, col) + '</g>')
