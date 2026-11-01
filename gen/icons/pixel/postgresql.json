@@ -1,0 +1,31 @@
+{
+"size": 18,
+"palette": {
+"a": "#000000",
+"b": "#3d3d3d",
+"c": "#446c8c",
+"d": "#97afc2",
+"e": "#708ba2",
+"f": "#336791"
+},
+"rows": [
+"....aa..aaabbba...",
+"..cdddeeddddeedc..",
+".cefffdcfffcdcfec.",
+".efffcdffffffdffea",
+"adfffeccfffffeefe.",
+".efffddddfffdddfe.",
+".efffdfcdfffdcdcc.",
+".efffdffdfffdcdda.",
+".beffdffdfffeede..",
+".adffeefdffffddb..",
+"..ecffdddffffddbc.",
+"..bdfdcddefffdede.",
+"...bebdddefffebb..",
+"......aabefffe....",
+"........beffec....",
+"........bdffdb....",
+".........eede.....",
+"..........bb......"
+]
+}

@@ -1,0 +1,25 @@
+{
+"size": 16,
+"palette": {
+"b": "#2496ed",
+"e": "#0d1117"
+},
+"rows": [
+"................",
+"................",
+"..........bb....",
+"..........bb....",
+"....bb.bb.bb....",
+"....bb.bb.bb....",
+".bb.bb.bb.bb.bb.",
+".bb.bb.bb.bb.bb.",
+"..............b.",
+"bbbbbbbbbbbbbbbb",
+"bbebbbbbbbbbbbb.",
+"bbbbbbbbbbbbbb..",
+".bbbbbbbbbbbb...",
+"..bbbbbbbbbb....",
+"....bbbbbb......",
+"................"
+]
+}

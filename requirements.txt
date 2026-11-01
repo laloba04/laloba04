@@ -1,0 +1,6 @@
+# Para generar el perfil (gen/build.py) no hace falta nada: solo Python 3.10+.
+pytest>=8
+# Opcionales, solo para las herramientas de tools/:
+#   subset_font.py    -> fonttools, brotli
+#   pixelate_icons.py -> pillow (y rsvg-convert instalado en el sistema)
+#   preview.py        -> playwright

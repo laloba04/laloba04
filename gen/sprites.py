@@ -1,0 +1,133 @@
+"""Sprites en ASCII: cada letra es un color de la paleta y '.' es transparente."""
+from pixel import AMBER, BG, PURPLE, grid
+
+# ---------- Chica ----------
+GIRL = [
+    "....HHHHHH....",
+    "..HHHHHHHHHH..",
+    ".HHhHHHHHHHHH.",
+    ".HHHHHSSHHHHH.",
+    ".HHSSSSSSSSHH.",
+    "HHSSSSSSSSSSHH",
+    "HHSESSSSSSESHH",
+    "HHSSSSSSSSSSHH",
+    "HHSBSSSSSSBSHH",
+    "HHSSSSMMSSSSHH",
+    "HH.SSSSSSSS.HH",
+    "HH..sSSSSs..HH",
+    "HHTTTTSSTTTTHH",
+    "HTTTTTTTTTTTTH",
+    ".TTTTTTTTTTTT.",
+]
+SKIN = "#f1c6a0"
+GIRL_PAL = {"H": "#16131a", "h": "#3b3442", "S": SKIN, "s": "#d9a27c", "E": "#1b1f24",
+            "B": "#e8908a", "M": "#b5535a", "T": PURPLE}
+
+# ---------- Portátil (Y = logo de lobo) ----------
+LAPTOP = [
+    "AAAAAAAAAAAAAAAAAA",
+    "ACCCCCCCCCCCCCCCCA",
+    "ACCCCCCCYCCYCCCCCA",
+    "ACCCCCCCYYYYCCCCCA",
+    "ACCCCCCCCYYCCCCCCA",
+    "ACCCCCCCCCCCCCCCCA",
+    "ACCCCCCCCCCCCCCCCA",
+    "AAAAAAAAAAAAAAAAAA",
+]
+LAPTOP_PAL = {"A": "#484f58", "C": "#6e7681"}
+
+# ---------- Lobito ----------
+PUP = [
+    "D......D.",
+    "DD....DD.",
+    "DPDDDDPD.",
+    "DGGGGGGD.",
+    "GKGGGGKG.",
+    "GGLLLLGG.",
+    ".GLNNLG..",
+    "..LLLL...",
+    ".GGLLGG.G",
+    "GGGLLGGGG",
+    "GGGLLGGG.",
+    "GG.LL.GG.",
+]
+PUP_PAL = {"D": "#484f58", "G": "#8b949e", "L": "#d0d7de", "P": "#c77d9a", "K": BG, "N": BG}
+
+# ---------- Lobo aullando (silueta) ----------
+HOWL = [
+    ".................##.....",
+    "................###.....",
+    "...............####.....",
+    "..........#...####......",
+    "..........##.#####......",
+    "..........########......",
+    "...........#######......",
+    "...........######.......",
+    "...........######.......",
+    "..........#######.......",
+    "..........#######.......",
+    ".........########.......",
+    "........#########.......",
+    ".......##########.......",
+    "......###########.......",
+    ".....############.......",
+    ".....############.......",
+    "....#############.......",
+    "....##########.##.......",
+    "....#########..##.......",
+    "....########...##.......",
+    "...#########...##.......",
+    "..##########..###.......",
+    "####.######...###.......",
+    "###..#####...####.......",
+]
+
+MOON = [
+    "...######...", ".##########.", "############", "####..######",
+    "####..######", "############", "#######..###", "#######..###",
+    "############", "############", ".##########.", "...######...",
+]
+
+# ---------- Animaciones CSS ----------
+BLINK_CSS = (".blink{opacity:0;animation:blink 5s steps(1) infinite}"
+             ".blink2{opacity:0;animation:blink 6s steps(1) infinite 2s}"
+             "@keyframes blink{0%,93%{opacity:0}94%,97%{opacity:1}98%,100%{opacity:0}}")
+TWINKLE_CSS = (".tw0{animation:tw 3s steps(1) infinite}.tw1{animation:tw 4s steps(1) infinite 1s}"
+               ".tw2{animation:tw 5s steps(1) infinite 2s}.tw3{animation:tw 6s steps(1) infinite .5s}"
+               "@keyframes tw{50%{opacity:.15}}")
+SCENE_CSS = (".glow{animation:glow 2.4s ease-in-out infinite}@keyframes glow{50%{opacity:.45}}"
+             ".code{animation:code 3s steps(3) infinite}@keyframes code{0%{opacity:0;transform:translateY(6px)}"
+             "50%{opacity:1}100%{opacity:0;transform:translateY(-10px)}}")
+
+
+def girl_scene(x0, y0, s, silhouette=None, anim=True, pup=True):
+    """Chica con portátil y lobito sentado al lado. Ocupa 32 x 21 celdas de tamaño s."""
+    def pal(p):
+        return {k: silhouette for k in p} if silhouette else p
+
+    out = []
+    gx, gy = x0 + 4 * s, y0
+    out.append(grid(GIRL, pal(GIRL_PAL), gx, gy, s))
+    if anim and not silhouette:
+        out.append(f'<g class="blink"><rect x="{gx+3*s}" y="{gy+6*s}" width="{s}" height="{s}" fill="{SKIN}"/>'
+                   f'<rect x="{gx+10*s}" y="{gy+6*s}" width="{s}" height="{s}" fill="{SKIN}"/></g>')
+    lx, ly = x0 + 2 * s, y0 + 11 * s
+    out.append(grid(LAPTOP, pal(LAPTOP_PAL), lx, ly, s))
+    logo = [r.replace("A", ".").replace("C", ".") for r in LAPTOP]
+    if silhouette:
+        out.append(f'<circle cx="{lx+10*s}" cy="{ly+3.5*s}" r="{2.5*s}" fill="{AMBER}" opacity=".15"/>')
+    out.append(f'<g class="{"glow" if anim else ""}">' + grid(logo, {"Y": AMBER}, lx, ly, s) + '</g>')
+    out.append(f'<rect x="{x0}" y="{ly+8*s}" width="{22*s}" height="{s}" fill="{silhouette or "#30363d"}"/>')
+    if not silhouette:  # manos sobre el teclado
+        out.append(f'<rect x="{lx-s}" y="{ly+7*s}" width="{s}" height="{s}" fill="{SKIN}"/>'
+                   f'<rect x="{lx+18*s}" y="{ly+7*s}" width="{s}" height="{s}" fill="{SKIN}"/>')
+    if pup:
+        out.append(grid(PUP, pal(PUP_PAL), x0 + 23 * s, y0 + 8 * s, s))
+        if anim and not silhouette:
+            out.append(f'<g class="blink2"><rect x="{x0+24*s}" y="{y0+12*s}" width="{s}" height="{s}" fill="#8b949e"/>'
+                       f'<rect x="{x0+29*s}" y="{y0+12*s}" width="{s}" height="{s}" fill="#8b949e"/></g>')
+    return "".join(out)
+
+
+def girl_head(x, y, s):
+    return grid(GIRL, GIRL_PAL, x, y, s)

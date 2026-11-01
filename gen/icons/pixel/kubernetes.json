@@ -1,0 +1,28 @@
+{
+"size": 16,
+"palette": {
+"a": "#326ce5",
+"b": "#6e97ec",
+"c": "#2f6ce3",
+"d": "#366fe6",
+"e": "#cddbf9"
+},
+"rows": [
+".......aa.......",
+".....aaaaaa.....",
+"...aaaabbaaaa...",
+".caaaaabbaaaaaa.",
+".aabdbeeeebdbaa.",
+".aadeebbbbeedaa.",
+".aadeeeeeeeedaa.",
+"aaabedeeeedebaaa",
+"aaabeeeeeeeebaaa",
+"aabeebbeebbeebaa",
+"aaaaebebbebeaaaa",
+".aaadeebbeedaaa.",
+"..aaabbeebbaaa..",
+"..aaabaaaabaaa..",
+"...aaaaaaaaaa...",
+"....aaaaaaaa...."
+]
+}

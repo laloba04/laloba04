@@ -1,0 +1,61 @@
+name: Datos vivos
+
+# Cada día descarga las estadísticas de GitHub, regenera los SVG y los sube.
+# También se ejecuta al cambiar el generador o los textos, y a mano desde la pestaña Actions.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "gen/**"
+      - "data/profile.json"
+      - "fonts/**"
+      - "tools/**"
+      - ".github/workflows/datos-vivos.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos-vivos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Descargar datos de GitHub
+        run: python tools/fetch_live.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generar SVG y README
+        run: python gen/build.py
+
+      - name: Validar
+        run: |
+          python tools/validate.py
+          pytest -q
+
+      - name: Subir cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets data README.md README.en.md
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "chore: actualizar datos vivos"
+            git push
+          fi

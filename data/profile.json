@@ -1,0 +1,440 @@
+{
+  "user": "laloba04",
+  "name": "Maria Bravo",
+  "links": {
+    "portfolio": "https://mariaba.pages.dev",
+    "linkedin": "https://www.linkedin.com/in/maria-bravo-angulo",
+    "email": "mba.maria08@gmail.com",
+    "cv": "cv/cv-maria-bravo.pdf"
+  },
+  "inventory": [
+    [
+      "Java",
+      "java",
+      "#e76f00"
+    ],
+    [
+      "Spring Boot",
+      "springboot",
+      "#6db33f"
+    ],
+    [
+      "TypeScript",
+      "typescript",
+      "#3178c6"
+    ],
+    [
+      "React",
+      "react",
+      "#61dafb"
+    ],
+    [
+      "Angular",
+      "angular",
+      "#dd0031"
+    ],
+    [
+      "Ionic",
+      "ionic",
+      "#4e8ef7"
+    ],
+    [
+      "Python",
+      "python",
+      "#ffd43b"
+    ],
+    [
+      "Docker",
+      "docker",
+      "#2496ed"
+    ],
+    [
+      "Kubernetes",
+      "kubernetes",
+      "#326ce5"
+    ],
+    [
+      "GH Actions",
+      "githubactions",
+      "#2088ff"
+    ],
+    [
+      "SonarQube",
+      "sonarqube",
+      "#4e9bcd"
+    ],
+    [
+      "PostgreSQL",
+      "postgresql",
+      "#336791"
+    ]
+  ],
+  "quests": [
+    {
+      "slug": "skyfence",
+      "name": "SkyFence",
+      "color": "amber",
+      "status": "done",
+      "stack": "Java 17 · Spring Boot · React · WebSocket",
+      "es": "Geovallas en tiempo real con pipeline DevSecOps.",
+      "en": "Real-time geofencing with a DevSecOps pipeline."
+    },
+    {
+      "slug": "casinoctf",
+      "name": "CasinoCTF",
+      "color": "pink",
+      "status": "done",
+      "stack": "React · Flask · PostgreSQL · PWA",
+      "es": "Un casino con 9 retos OWASP para practicar seguridad web.",
+      "en": "A casino with 9 OWASP challenges to practise web security."
+    },
+    {
+      "slug": "secaudit",
+      "name": "SecAudit",
+      "color": "green",
+      "status": "done",
+      "stack": "Python · Go · React",
+      "es": "Análisis de CVEs con informes en PDF y HTML.",
+      "en": "CVE analysis with PDF and HTML reports."
+    },
+    {
+      "slug": "sentinelface",
+      "name": "SentinelFace",
+      "color": "blue",
+      "status": "done",
+      "stack": "React · TypeScript · MediaPipe · TF.js",
+      "es": "Detección de vida (liveness) 100 % en el navegador.",
+      "en": "Face liveness detection, running 100% in the browser."
+    },
+    {
+      "slug": "habitflow",
+      "name": "HabitFlow",
+      "color": "purple",
+      "status": "done",
+      "stack": "Angular · Ionic · AWS Lambda · DynamoDB",
+      "es": "App de hábitos serverless con bot de Telegram.",
+      "en": "Serverless habit tracker with a Telegram bot."
+    },
+    {
+      "slug": "rag-notas",
+      "name": "rag-notas",
+      "color": "moon",
+      "status": "wip",
+      "stack": "Python · ChromaDB · sentence-transformers",
+      "es": "Preguntas en lenguaje natural sobre mis apuntes (RAG).",
+      "en": "Ask my study notes questions in plain language (RAG)."
+    }
+  ],
+  "lang": {
+    "es": {
+      "lang_btn": "ENGLISH",
+      "lang_alt": "Botón ENGLISH: cambia a la versión del perfil en inglés.",
+      "tagline": "Desarrolladora Full Stack y Mobile junior · Barakaldo",
+      "term": {
+        "desktop": [
+          [
+            "$",
+            "docker compose up maria"
+          ],
+          [
+            "✓",
+            "frontend   Angular · React · Ionic"
+          ],
+          [
+            "✓",
+            "backend    Java · Spring Boot · Python"
+          ],
+          [
+            "✓",
+            "mobile     Ionic · React Native · Swift"
+          ],
+          [
+            "✓",
+            "devops     Docker · K8s · GitHub Actions"
+          ],
+          [
+            "!",
+            "manada     buscando equipo... ¡disponible!"
+          ]
+        ],
+        "mobile": [
+          [
+            "$",
+            "docker compose up maria"
+          ],
+          [
+            "✓",
+            "front   Angular · React"
+          ],
+          [
+            "✓",
+            "back    Java · Spring · Python"
+          ],
+          [
+            "✓",
+            "mobile  Ionic · RN · Swift"
+          ],
+          [
+            "✓",
+            "devops  Docker · K8s · Actions"
+          ],
+          [
+            "!",
+            "manada  buscando equipo..."
+          ],
+          [
+            ">",
+            "¡disponible!"
+          ]
+        ]
+      },
+      "hero_alt": "Maria, desarrolladora en Barakaldo. Una chica pixel art programa en su portátil con un lobito sentado a su lado, junto a una terminal que ejecuta docker compose up maria y levanta sus servicios: frontend con Angular, React e Ionic; backend con Java, Spring Boot y Python; mobile con Ionic, React Native y Swift; devops con Docker, Kubernetes y GitHub Actions; y manada: buscando equipo, disponible.",
+      "btn": {
+        "portfolio": "PORTFOLIO",
+        "linkedin": "LINKEDIN",
+        "email": "CORREO",
+        "cv": "CV"
+      },
+      "sheet_title": "FICHA DE PERSONAJE",
+      "sheet": [
+        [
+          "CLASE",
+          "Full Stack y Mobile · Cloud Native"
+        ],
+        [
+          "NIVEL",
+          "Junior · unos 13 meses en empresa"
+        ],
+        [
+          "BASE",
+          "Barakaldo, Bizkaia"
+        ],
+        [
+          "GREMIOS",
+          "Batura Mobile · Grupo Radimer · BeXReal"
+        ],
+        [
+          "ORIGEN",
+          "SMR → DAM → Especialización Cloud Native (600 h)"
+        ],
+        [
+          "IDIOMAS",
+          "Español nativo · Euskera B1 · Inglés intermedio"
+        ],
+        [
+          "ENTRENANDO",
+          "RAG / IA generativa · después, DevSecOps"
+        ]
+      ],
+      "sheet_alt": "Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, unos 13 meses en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.",
+      "stats_title": "PUNTUACIÓN",
+      "stats_labels": [
+        "CONTRIBUCIONES",
+        "DÍAS ACTIVOS",
+        "RACHA ACTUAL",
+        "MEJOR RACHA"
+      ],
+      "stats_sub": "último año",
+      "stats_days": "días",
+      "stats_langs": "LENGUAJES EN MIS REPOS",
+      "stats_updated": "actualizado",
+      "stats_alt": "Puntuación del último año en GitHub: {total} contribuciones, {active} días activos, racha actual de {current} días y mejor racha de {longest} días. Lenguajes en mis repos: {langs}.",
+      "ach_title": "LOGROS DESBLOQUEADOS",
+      "ach": [
+        [
+          "★",
+          "Título oficial de DAM (FP Superior)"
+        ],
+        [
+          "★",
+          "600 h de especialización Cloud Native"
+        ],
+        [
+          "★",
+          "SkyFence desplegada con pipeline DevSecOps"
+        ],
+        [
+          "★",
+          "9 retos OWASP jugables en CasinoCTF"
+        ],
+        [
+          "★",
+          "Detección de vida facial en el navegador"
+        ],
+        [
+          "◇",
+          "RAG con ChromaDB en marcha (rag-notas)"
+        ]
+      ],
+      "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; detección de vida facial en el navegador; RAG con ChromaDB en marcha.",
+      "inv_title": "INVENTARIO",
+      "inv_alt": "Inventario de herramientas: Java, Spring Boot, TypeScript, React, Angular, Ionic, Python, Docker, Kubernetes, GitHub Actions, SonarQube y PostgreSQL.",
+      "quests_title": "MISIONES",
+      "status": {
+        "done": "COMPLETADA",
+        "wip": "EN CURSO"
+      },
+      "quest_more": "VER TODAS LAS MISIONES EN mariaba.pages.dev",
+      "quest_more_m": "MÁS MISIONES EN mariaba.pages.dev",
+      "night_alt": "Noche pixel art: luna llena, estrellas que titilan, un bosque de pinos y, sobre una roca, una chica con su portátil junto a un lobo que aúlla.",
+      "howl": "AUUU~",
+      "start": "PULSA START PARA HABLAR CONMIGO",
+      "start_alt": "PULSA START PARA HABLAR CONMIGO: {email}"
+    },
+    "en": {
+      "lang_btn": "ESPAÑOL",
+      "lang_alt": "ESPAÑOL button: switches to the Spanish version of the profile.",
+      "tagline": "Junior Full Stack & Mobile developer · Barakaldo, Spain",
+      "term": {
+        "desktop": [
+          [
+            "$",
+            "docker compose up maria"
+          ],
+          [
+            "✓",
+            "frontend   Angular · React · Ionic"
+          ],
+          [
+            "✓",
+            "backend    Java · Spring Boot · Python"
+          ],
+          [
+            "✓",
+            "mobile     Ionic · React Native · Swift"
+          ],
+          [
+            "✓",
+            "devops     Docker · K8s · GitHub Actions"
+          ],
+          [
+            "!",
+            "pack       looking for a team... available!"
+          ]
+        ],
+        "mobile": [
+          [
+            "$",
+            "docker compose up maria"
+          ],
+          [
+            "✓",
+            "front   Angular · React"
+          ],
+          [
+            "✓",
+            "back    Java · Spring · Python"
+          ],
+          [
+            "✓",
+            "mobile  Ionic · RN · Swift"
+          ],
+          [
+            "✓",
+            "devops  Docker · K8s · Actions"
+          ],
+          [
+            "!",
+            "pack    looking for a team..."
+          ],
+          [
+            ">",
+            "available!"
+          ]
+        ]
+      },
+      "hero_alt": "Maria, developer in Barakaldo, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic, React Native and Swift; devops with Docker, Kubernetes and GitHub Actions; and pack: looking for a team, available.",
+      "btn": {
+        "portfolio": "PORTFOLIO",
+        "linkedin": "LINKEDIN",
+        "email": "EMAIL",
+        "cv": "CV"
+      },
+      "sheet_title": "CHARACTER SHEET",
+      "sheet": [
+        [
+          "CLASS",
+          "Full Stack & Mobile · Cloud Native"
+        ],
+        [
+          "LEVEL",
+          "Junior · about 13 months in industry"
+        ],
+        [
+          "BASE",
+          "Barakaldo, Basque Country (Spain)"
+        ],
+        [
+          "GUILDS",
+          "Batura Mobile · Grupo Radimer · BeXReal"
+        ],
+        [
+          "ORIGIN",
+          "IT Systems → DAM degree → Cloud Native program (600 h)"
+        ],
+        [
+          "LANGUAGES",
+          "Spanish native · Basque B1 · English intermediate"
+        ],
+        [
+          "TRAINING",
+          "RAG / generative AI · next up, DevSecOps"
+        ]
+      ],
+      "sheet_alt": "Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, about 13 months in industry. Base: Barakaldo, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: IT systems, DAM degree and a 600-hour Cloud Native program. Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.",
+      "stats_title": "HIGH SCORE",
+      "stats_labels": [
+        "CONTRIBUTIONS",
+        "ACTIVE DAYS",
+        "CURRENT STREAK",
+        "BEST STREAK"
+      ],
+      "stats_sub": "last year",
+      "stats_days": "days",
+      "stats_langs": "LANGUAGES IN MY REPOS",
+      "stats_updated": "updated",
+      "stats_alt": "GitHub score for the last year: {total} contributions, {active} active days, a current streak of {current} days and a best streak of {longest} days. Languages in my repos: {langs}.",
+      "ach_title": "ACHIEVEMENTS UNLOCKED",
+      "ach": [
+        [
+          "★",
+          "Official DAM degree (Spanish higher VET)"
+        ],
+        [
+          "★",
+          "600 h Cloud Native specialization"
+        ],
+        [
+          "★",
+          "SkyFence deployed with a DevSecOps pipeline"
+        ],
+        [
+          "★",
+          "9 playable OWASP challenges in CasinoCTF"
+        ],
+        [
+          "★",
+          "Face liveness detection in the browser"
+        ],
+        [
+          "◇",
+          "RAG with ChromaDB in progress (rag-notas)"
+        ]
+      ],
+      "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; face liveness detection in the browser; RAG with ChromaDB in progress.",
+      "inv_title": "INVENTORY",
+      "inv_alt": "Tool inventory: Java, Spring Boot, TypeScript, React, Angular, Ionic, Python, Docker, Kubernetes, GitHub Actions, SonarQube and PostgreSQL.",
+      "quests_title": "QUESTS",
+      "status": {
+        "done": "COMPLETED",
+        "wip": "IN PROGRESS"
+      },
+      "quest_more": "SEE ALL QUESTS AT mariaba.pages.dev",
+      "quest_more_m": "MORE QUESTS AT mariaba.pages.dev",
+      "night_alt": "Pixel art night: full moon, twinkling stars, a pine forest and, on a rock, a girl with her laptop next to a howling wolf.",
+      "howl": "AWOO~",
+      "start": "PRESS START TO TALK TO ME",
+      "start_alt": "PRESS START TO TALK TO ME: {email}"
+    }
+  }
+}
