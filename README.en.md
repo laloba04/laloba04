@@ -20,6 +20,11 @@
 </picture>
 
 <picture>
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/stats.svg">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/stats.svg" width="100%" alt="GitHub score for the last year: 604 contributions, 105 active days, a current streak of 1 days and a best streak of 6 days. Languages in my repos: TypeScript, JavaScript, Python, Swift, Java, CSS.">
+</picture>
+
+<picture>
   <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/achievements.svg">
   <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/achievements.svg" width="100%" alt="Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; face liveness detection in the browser; RAG with ChromaDB in progress.">
 </picture>
