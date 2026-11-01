@@ -21,7 +21,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/stats.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/stats.svg" width="100%" alt="Puntuación del último año en GitHub: 604 contribuciones, 105 días activos, racha actual de 1 días y mejor racha de 6 días. Lenguajes en mis repos: TypeScript, JavaScript, Python, Swift, Java, CSS.">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/stats.svg" width="100%" alt="Puntuación del último año en GitHub: 605 contribuciones, 105 días activos, racha actual de 1 días y mejor racha de 6 días. Lenguajes en mis repos: TypeScript, JavaScript, Python, Swift, Java, CSS.">
 </picture>
 
 <picture>
