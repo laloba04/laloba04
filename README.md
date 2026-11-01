@@ -15,8 +15,8 @@
 <a href="mailto:mba.maria08@gmail.com"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-email.svg?v=390fba69" alt="CORREO"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=db2b1ab8">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=36e04f65" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=60ce4d6f">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=bdb8da05" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
 </picture>
 
 <picture>

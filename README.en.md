@@ -15,8 +15,8 @@
 <a href="mailto:mba.maria08@gmail.com"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-email.svg?v=bf652dc7" alt="EMAIL"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=e0a7e022">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=088f4fe9" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Barakaldo, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: IT systems, DAM degree and a 600-hour Cloud Native program. Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=570e1b5d">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=e951d0c3" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Barakaldo, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: IT systems, DAM degree and a 600-hour Cloud Native program. Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
 </picture>
 
 <picture>
