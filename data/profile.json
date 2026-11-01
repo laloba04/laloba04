@@ -313,7 +313,7 @@
         "wip": "En desarrollo"
       },
       "quest_more": "Más misiones en mariaba.pages.dev",
-      "night_alt": "Noche pixel art: luna llena, estrellas que titilan, un bosque de pinos y, sobre una roca, una chica con su portátil junto a un lobo que aúlla.",
+      "night_alt": "Noche pixel art: luna llena, estrellas que titilan, un bosque de pinos y un lobo aullando sobre una roca.",
       "howl": "AUUU~",
       "start": "PULSA START PARA HABLAR CONMIGO",
       "start_alt": "PULSA START PARA HABLAR CONMIGO: {email}",
@@ -481,7 +481,7 @@
         "wip": "In progress"
       },
       "quest_more": "More quests at mariaba.pages.dev",
-      "night_alt": "Pixel art night: full moon, twinkling stars, a pine forest and, on a rock, a girl with her laptop next to a howling wolf.",
+      "night_alt": "Pixel art night: full moon, twinkling stars, a pine forest and a wolf howling on a rock.",
       "howl": "AWOO~",
       "start": "PRESS START TO TALK TO ME",
       "start_alt": "PRESS START TO TALK TO ME: {email}",

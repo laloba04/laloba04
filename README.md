@@ -46,8 +46,8 @@
 </a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/night.svg?v=5562339c">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/night.svg?v=fb21c3a7" width="100%" alt="Noche pixel art: luna llena, estrellas que titilan, un bosque de pinos y, sobre una roca, una chica con su portátil junto a un lobo que aúlla.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/night.svg?v=f286d92b">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/night.svg?v=d90c2a96" width="100%" alt="Noche pixel art: luna llena, estrellas que titilan, un bosque de pinos y un lobo aullando sobre una roca.">
 </picture>
 
 <a href="mailto:mba.maria08@gmail.com">

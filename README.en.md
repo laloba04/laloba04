@@ -46,8 +46,8 @@
 </a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/night.svg?v=b4587456">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/night.svg?v=eab59ee6" width="100%" alt="Pixel art night: full moon, twinkling stars, a pine forest and, on a rock, a girl with her laptop next to a howling wolf.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/night.svg?v=f1162467">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/night.svg?v=737c9f66" width="100%" alt="Pixel art night: full moon, twinkling stars, a pine forest and a wolf howling on a rock.">
 </picture>
 
 <a href="mailto:mba.maria08@gmail.com">

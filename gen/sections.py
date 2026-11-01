@@ -479,11 +479,11 @@ def night(d, lang, mode, cfg):
     ws, gs = (6, 4) if desk else (5, 3)
     rx = 600 if desk else w - 190
     rock_top = ground - 28
-    body.append(f'<path d="M{rx-130} {h} L{rx-110} {rock_top+10} L{rx-40} {rock_top} L{rx+40} {rock_top} '
+    body.append(f'<path d="M{rx-20} {h} L{rx} {rock_top+16} L{rx+40} {rock_top} '
                 f'L{rx+100} {rock_top+4} L{rx+130} {rock_top+26} L{rx+150} {h}Z" fill="#141c2c"/>')
     rnd2 = random.Random(7)
     for x in range(10, w, 34 if desk else 30):
-        if rx - 130 < x < rx + 150:
+        if rx - 10 < x < rx + 150:
             continue
         hh = rnd2.choice([60, 72, 84, 96] if desk else [48, 60, 72])
         base = ground - rnd2.randrange(0, 12, 3)
@@ -493,7 +493,6 @@ def night(d, lang, mode, cfg):
         body.append(f'<rect x="{x-3}" y="{base}" width="6" height="10" fill="#2b1d14"/>')
     wy = rock_top + 6 - len(HOWL) * ws
     body.append(grid(HOWL, {"#": "#05070d"}, rx + 10, wy, ws))
-    body.append(girl_scene(rx - 105, rock_top - 20 * gs + 2, gs, silhouette="#05070d", pup=False))
     body.append(f'<g class="howl">{t(rx + 10 + 4 * ws, wy + 2 * ws, d["howl"], 16 if desk else 14, MOON, anchor="end")}</g>')
     body.append(f'<rect y="{ground}" width="{w}" height="30" fill="#070b14"/>')
     for x in range(0, w, 12):
