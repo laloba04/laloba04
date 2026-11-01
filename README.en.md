@@ -38,10 +38,10 @@
   <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quests-title.svg?v=9bcf3dfc" width="100%" alt="QUESTS">
 </picture>
 
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-skyfence.svg?v=51cb4ed7" alt="SkyFence — Real-time geofencing with a DevSecOps pipeline. (Java 17 · Spring Boot · React · WebSocket)"></a>
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-casinoctf.svg?v=26b2a7e4" alt="CasinoCTF — A casino with 9 OWASP challenges to practise web security. (React · Flask · PostgreSQL · PWA)"></a>
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-secaudit.svg?v=3e6cd42a" alt="SecAudit — CVE analysis with PDF and HTML reports. (Python · Go · React)"></a>
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-rag-notas.svg?v=e034c134" alt="rag-notas — Ask my study notes questions in plain language (RAG). (Python · ChromaDB · sentence-transformers)"></a>
+<a href="https://mariaba.pages.dev/proyectos/skyfence/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-skyfence.svg?v=51cb4ed7" alt="SkyFence — Real-time geofencing with a DevSecOps pipeline. (Java 17 · Spring Boot · React · WebSocket)"></a>
+<a href="https://mariaba.pages.dev/proyectos/casinoctf/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-casinoctf.svg?v=26b2a7e4" alt="CasinoCTF — A casino with 9 OWASP challenges to practise web security. (React · Flask · PostgreSQL · PWA)"></a>
+<a href="https://mariaba.pages.dev/proyectos/secaudit/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-secaudit.svg?v=3e6cd42a" alt="SecAudit — CVE analysis with PDF and HTML reports. (Python · Go · React)"></a>
+<a href="https://mariaba.pages.dev/proyectos/rag-notas/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-rag-notas.svg?v=e034c134" alt="rag-notas — Ask my study notes questions in plain language (RAG). (Python · ChromaDB · sentence-transformers)"></a>
 
 <a href="https://mariaba.pages.dev">
 <picture>

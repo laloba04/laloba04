@@ -38,10 +38,10 @@
   <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quests-title.svg?v=f4afdc99" width="100%" alt="MISIONES">
 </picture>
 
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-skyfence.svg?v=be9f68e8" alt="SkyFence — Geovallas en tiempo real con pipeline DevSecOps. (Java 17 · Spring Boot · React · WebSocket)"></a>
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-casinoctf.svg?v=c5789a5e" alt="CasinoCTF — Un casino con 9 retos OWASP para practicar seguridad web. (React · Flask · PostgreSQL · PWA)"></a>
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-secaudit.svg?v=05ef030b" alt="SecAudit — Análisis de CVEs con informes en PDF y HTML. (Python · Go · React)"></a>
-<a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-rag-notas.svg?v=7b822069" alt="rag-notas — Preguntas en lenguaje natural sobre mis apuntes (RAG). (Python · ChromaDB · sentence-transformers)"></a>
+<a href="https://mariaba.pages.dev/proyectos/skyfence/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-skyfence.svg?v=be9f68e8" alt="SkyFence — Geovallas en tiempo real con pipeline DevSecOps. (Java 17 · Spring Boot · React · WebSocket)"></a>
+<a href="https://mariaba.pages.dev/proyectos/casinoctf/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-casinoctf.svg?v=c5789a5e" alt="CasinoCTF — Un casino con 9 retos OWASP para practicar seguridad web. (React · Flask · PostgreSQL · PWA)"></a>
+<a href="https://mariaba.pages.dev/proyectos/secaudit/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-secaudit.svg?v=05ef030b" alt="SecAudit — Análisis de CVEs con informes en PDF y HTML. (Python · Go · React)"></a>
+<a href="https://mariaba.pages.dev/proyectos/rag-notas/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-rag-notas.svg?v=7b822069" alt="rag-notas — Preguntas en lenguaje natural sobre mis apuntes (RAG). (Python · ChromaDB · sentence-transformers)"></a>
 
 <a href="https://mariaba.pages.dev">
 <picture>

@@ -82,7 +82,8 @@
       "es": "Geovallas en tiempo real con pipeline DevSecOps.",
       "en": "Real-time geofencing with a DevSecOps pipeline.",
       "featured": true,
-      "show": true
+      "show": true,
+      "url": "https://mariaba.pages.dev/proyectos/skyfence/"
     },
     {
       "slug": "casinoctf",
@@ -93,7 +94,8 @@
       "es": "Un casino con 9 retos OWASP para practicar seguridad web.",
       "en": "A casino with 9 OWASP challenges to practise web security.",
       "featured": true,
-      "show": true
+      "show": true,
+      "url": "https://mariaba.pages.dev/proyectos/casinoctf/"
     },
     {
       "slug": "secaudit",
@@ -104,7 +106,8 @@
       "es": "Análisis de CVEs con informes en PDF y HTML.",
       "en": "CVE analysis with PDF and HTML reports.",
       "featured": false,
-      "show": true
+      "show": true,
+      "url": "https://mariaba.pages.dev/proyectos/secaudit/"
     },
     {
       "slug": "rag-notas",
@@ -115,7 +118,8 @@
       "es": "Preguntas en lenguaje natural sobre mis apuntes (RAG).",
       "en": "Ask my study notes questions in plain language (RAG).",
       "featured": false,
-      "show": true
+      "show": true,
+      "url": "https://mariaba.pages.dev/proyectos/rag-notas/"
     },
     {
       "slug": "habitflow",
@@ -126,7 +130,8 @@
       "es": "App de hábitos serverless con bot de Telegram.",
       "en": "Serverless habit tracker with a Telegram bot.",
       "featured": false,
-      "show": false
+      "show": false,
+      "url": "https://mariaba.pages.dev/proyectos/habitflow/"
     },
     {
       "slug": "control-acceso-ble",
@@ -137,7 +142,8 @@
       "es": "Control de acceso por Bluetooth (BLE) desde el móvil.",
       "en": "Bluetooth (BLE) access control from your phone.",
       "featured": false,
-      "show": false
+      "show": false,
+      "url": "https://mariaba.pages.dev/proyectos/control-acceso-ble/"
     }
   ],
   "lang": {
