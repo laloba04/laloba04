@@ -16,8 +16,8 @@
 <a href="https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv.pdf"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-cv.svg?v=f928d41f" alt="CV"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=ede3fea8">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=0640be95" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=65110c45">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=8ebfc535" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
 </picture>
 
 <picture>

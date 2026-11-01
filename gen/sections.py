@@ -177,29 +177,27 @@ def sheet(d, lang, mode, cfg, live=None):
     langs = (live or {}).get("languages", [])[:6]
     name = cfg["name"].upper()
     if mode == "desktop":
-        xv, maxc = 390, 52
+        xl, xv, maxc = 48, 210, 64
         blocks = [(k, wrap(v, maxc)) for k, v in rows]
-        info_h = 50 + sum(26 * len(ls) for _, ls in blocks) + 34
         top = 76
-        h = top + max(info_h, 230) + (80 + 34 + 26 * len(langs) if live else 0) + 30
+        info_h = 50 + sum(26 * len(ls) for _, ls in blocks) + 34
+        h = top + info_h + (80 + 34 + 26 * len(langs) if live else 0) + 30
         body, pad = section(w, h, d["sheet_title"])
         body.append(rule(48, w - 96))
-        body.append(frame(48, top + 6, 214, 200, fill="#0b0f14", stroke=BORDER, px=3))
-        body.append(girl_scene(57, top + 50, 6))
-        body.append(t(282, top + 34, name, 26, TXT))
+        body.append(t(xl, top + 34, name, 26, TXT))
         y = top + 72
         for k, ls in blocks:
-            body.append(t(282, y, k, 14, MUTED))
+            body.append(t(xl, y, k, 14, MUTED))
             for ln in ls:
                 body.append(t(xv, y, ln, 15, TXT))
                 y += 26
-        body.append(t(282, y + 4, d["langs_label"], 14, MUTED))
+        body.append(t(xl, y + 4, d["langs_label"], 14, MUTED))
         hx = xv
         for code, val in cfg["hearts"]:
             body.append(t(hx, y + 4, code, 15, TXT))
             body.append(_hearts(hx + 28, y - 9, val))
             hx += 120
-        y = top + max(info_h, 230) + 6
+        y = top + info_h + 6
         if live:
             _exp(body, d, lang, live, 48, y, w - 96)
             y += 84
@@ -208,14 +206,12 @@ def sheet(d, lang, mode, cfg, live=None):
     else:
         x0, maxc = 30, 40
         blocks = [(k, wrap(v, maxc)) for k, v in rows]
-        h = (76 + 150 + 40 + sum(20 + 20 * len(ls) + 10 for _, ls in blocks) + 70
+        h = (76 + 40 + sum(20 + 20 * len(ls) + 10 for _, ls in blocks) + 70
              + (90 + 30 + 24 * len(langs) if live else 0) + 20)
         body, pad = section(w, h, d["sheet_title"])
         body.append(rule(x0, w - 2 * x0))
-        body.append(frame((w - 190) / 2, 76, 190, 140, fill="#0b0f14", stroke=BORDER, px=3))
-        body.append(girl_scene((w - 160) / 2, 98, 5))
-        body.append(t(w / 2, 250, name, 22, TXT, anchor="middle"))
-        y = 286
+        body.append(t(x0, 104, name, 22, TXT))
+        y = 140
         for k, ls in blocks:
             body.append(t(x0, y, k, 12, MUTED))
             y += 20
@@ -240,8 +236,7 @@ def sheet(d, lang, mode, cfg, live=None):
     if live:
         alt += d["sheet_live_alt"].format(total=fmt_int(live["total"], lang), active=live["active_days"],
                                           langs=", ".join(f'{l_["name"]} {l_["pct"]} %' for l_ in langs))
-    css = BLINK_CSS + SCENE_CSS
-    return svg(w, h, "".join(body), alt, css)
+    return svg(w, h, "".join(body), alt)
 
 
 # ---------- High score (datos vivos de GitHub) ----------
