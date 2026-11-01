@@ -1,0 +1,24 @@
+{
+"size": 16,
+"palette": {
+"a": "#e6edf3"
+},
+"rows": [
+"................",
+"................",
+".......aa.......",
+"......aaaa......",
+"......aaaa......",
+".....aaaaaa.....",
+".....aaaaaa.....",
+"....aaaaaaaa....",
+"...aaaaaaaaaa...",
+"...aaaaaaaaaa...",
+"..aaaaaaaaaaaa..",
+"..aaaaaaaaaaaa..",
+".aaaaaaaaaaaaaa.",
+".aaaaaaaaaaaaaa.",
+"aaaaaaaaaaaaaaaa",
+"................"
+]
+}

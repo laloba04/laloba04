@@ -62,7 +62,7 @@ def pixelate(name):
 
 
 # Logos con partes oscuras que no se verían sobre el fondo: los colores muy oscuros pasan a claro
-LIGHTEN_DARK = {"amazonwebservices", "flask"}
+LIGHTEN_DARK = {"amazonwebservices", "flask", "vercel"}
 
 
 def lighten_dark(data):
