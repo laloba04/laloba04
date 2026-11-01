@@ -10,7 +10,7 @@ CW = 0.6  # ancho de carácter en múltiplos del tamaño de diseño
 
 
 # ---------- Portada ----------
-PREFIX_COLOR = {"$": PURPLE, "✓": GREEN, "!": AMBER, ">": MUTED}
+PREFIX_COLOR = {"$": PURPLE, "✓": GREEN, "●": GREEN, "!": AMBER, ">": MUTED}
 
 
 def _terminal(body, d, lang, mode, tx, ty, tw, th, fsize, lh):
@@ -24,7 +24,7 @@ def _terminal(body, d, lang, mode, tx, ty, tw, th, fsize, lh):
     delay = 0.3
     for i, (p, line) in enumerate(d["term"][mode]):
         is_cmd = p == "$"
-        col = GREEN if is_cmd else (AMBER if p == "!" else TXT)
+        col = GREEN if is_cmd else (AMBER if p in ("!", "●") or (p == ">" and i == len(d["term"][mode]) - 1) else TXT)
         chars = len(line) + 2
         dur = max(0.4, chars * (0.06 if is_cmd else 0.02))
         cid = f"c{lang}{mode[0]}{i}"
