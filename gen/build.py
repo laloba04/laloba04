@@ -77,7 +77,7 @@ def build():
                 files["stats.svg"] = S.stats(d, lang, mode, cfg, live)
                 stats_alt = re.search(r'aria-label="([^"]*)"', files["stats.svg"]).group(1)
             if mode == "desktop":  # las tarjetas de misión valen igual para PC y móvil
-                for q in cfg["quests"]:
+                for q in [q for q in cfg["quests"] if q.get("show", True)]:
                     files[f'quest-{q["slug"]}.svg'] = S.quest(d, lang, mode, cfg, q)
             for name, content in files.items():
                 write(folder / name, content)

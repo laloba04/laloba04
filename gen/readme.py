@@ -30,7 +30,7 @@ def readme(cfg, lang, has_stats, stats_alt="", cv=None):
     quests = "\n".join(
         f'<a href="{q.get("url", links["portfolio"])}"><img src="{a}/quest-{q["slug"]}.svg" '
         f'alt="{esc(q["name"])} — {esc(q[lang])} ({esc(q["stack"])})"></a>'
-        for q in cfg["quests"])
+        for q in cfg["quests"] if q.get("show", True))
 
     parts = [
         pic("hero.svg", d["hero_alt"]),

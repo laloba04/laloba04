@@ -396,13 +396,14 @@ def quest(d, lang, mode, cfg, q):
 def quests_more(d, lang, mode, cfg):
     w = WIDTH[mode]
     pad = 24 if mode == "desktop" else 12
-    txt = d["quest_more"] if mode == "desktop" else d["quest_more_m"]
+    n = cfg.get("more_quests")
+    txt = d["quest_more_n"].format(n=n) if n else d["quest_more"]
     h = 56
     body = [f'<rect width="{w}" height="{h}" fill="{BG}"/>',
             frame(pad, 6, w - 2 * pad, h - 12, fill=PANEL, stroke=BORDER),
             grid(["#...", "##..", "###.", "####", "###.", "##..", "#..."], {"#": GREEN}, w / 2 - len(txt) * 13 * CW / 2 - 18, 21, 2),
-            t(w / 2 + 6, 34, txt, 13, BLUE, anchor="middle")]
-    return svg(w, h, "".join(body), d["quest_more"])
+            t(w / 2 + 6, 34, txt, 14 if mode == "desktop" else 13, BLUE, anchor="middle")]
+    return svg(w, h, "".join(body), txt)
 
 
 # ---------- Escena nocturna ----------

@@ -81,7 +81,8 @@
       "stack": "Java 17 · Spring Boot · React · WebSocket",
       "es": "Geovallas en tiempo real con pipeline DevSecOps.",
       "en": "Real-time geofencing with a DevSecOps pipeline.",
-      "featured": true
+      "featured": true,
+      "show": true
     },
     {
       "slug": "casinoctf",
@@ -91,7 +92,8 @@
       "stack": "React · Flask · PostgreSQL · PWA",
       "es": "Un casino con 9 retos OWASP para practicar seguridad web.",
       "en": "A casino with 9 OWASP challenges to practise web security.",
-      "featured": true
+      "featured": true,
+      "show": true
     },
     {
       "slug": "secaudit",
@@ -101,27 +103,8 @@
       "stack": "Python · Go · React",
       "es": "Análisis de CVEs con informes en PDF y HTML.",
       "en": "CVE analysis with PDF and HTML reports.",
-      "featured": false
-    },
-    {
-      "slug": "control-acceso-ble",
-      "name": "Control de Acceso BLE",
-      "color": "blue",
-      "status": "done",
-      "stack": "React Native · Firebase · Raspberry Pi",
-      "es": "Control de acceso por Bluetooth (BLE) desde el móvil.",
-      "en": "Bluetooth (BLE) access control from your phone.",
-      "featured": false
-    },
-    {
-      "slug": "habitflow",
-      "name": "HabitFlow",
-      "color": "purple",
-      "status": "done",
-      "stack": "Angular · Ionic · AWS Lambda · DynamoDB",
-      "es": "App de hábitos serverless con bot de Telegram.",
-      "en": "Serverless habit tracker with a Telegram bot.",
-      "featured": false
+      "featured": false,
+      "show": true
     },
     {
       "slug": "rag-notas",
@@ -131,7 +114,30 @@
       "stack": "Python · ChromaDB · sentence-transformers",
       "es": "Preguntas en lenguaje natural sobre mis apuntes (RAG).",
       "en": "Ask my study notes questions in plain language (RAG).",
-      "featured": false
+      "featured": false,
+      "show": true
+    },
+    {
+      "slug": "habitflow",
+      "name": "HabitFlow",
+      "color": "purple",
+      "status": "done",
+      "stack": "Angular · Ionic · AWS Lambda · DynamoDB",
+      "es": "App de hábitos serverless con bot de Telegram.",
+      "en": "Serverless habit tracker with a Telegram bot.",
+      "featured": false,
+      "show": false
+    },
+    {
+      "slug": "control-acceso-ble",
+      "name": "Control de Acceso BLE",
+      "color": "blue",
+      "status": "done",
+      "stack": "React Native · Firebase · Raspberry Pi",
+      "es": "Control de acceso por Bluetooth (BLE) desde el móvil.",
+      "en": "Bluetooth (BLE) access control from your phone.",
+      "featured": false,
+      "show": false
     }
   ],
   "lang": {
@@ -275,8 +281,7 @@
         "done": "Completado",
         "wip": "En desarrollo"
       },
-      "quest_more": "VER TODAS LAS MISIONES EN mariaba.pages.dev",
-      "quest_more_m": "MÁS MISIONES EN mariaba.pages.dev",
+      "quest_more": "Más misiones en mariaba.pages.dev",
       "night_alt": "Noche pixel art: luna llena, estrellas que titilan, un bosque de pinos y, sobre una roca, una chica con su portátil junto a un lobo que aúlla.",
       "howl": "AUUU~",
       "start": "PULSA START PARA HABLAR CONMIGO",
@@ -295,7 +300,8 @@
         "día",
         "contribución"
       ],
-      "subtitle": "Desarrolladora Full Stack y Mobile · Barakaldo"
+      "subtitle": "Desarrolladora Full Stack y Mobile · Barakaldo",
+      "quest_more_n": "+{n} misiones más en mariaba.pages.dev"
     },
     "en": {
       "lang_btn": "ESPAÑOL",
@@ -437,8 +443,7 @@
         "done": "Completed",
         "wip": "In progress"
       },
-      "quest_more": "SEE ALL QUESTS AT mariaba.pages.dev",
-      "quest_more_m": "MORE QUESTS AT mariaba.pages.dev",
+      "quest_more": "More quests at mariaba.pages.dev",
       "night_alt": "Pixel art night: full moon, twinkling stars, a pine forest and, on a rock, a girl with her laptop next to a howling wolf.",
       "howl": "AWOO~",
       "start": "PRESS START TO TALK TO ME",
@@ -457,7 +462,8 @@
         "day",
         "contribution"
       ],
-      "subtitle": "Full Stack & Mobile Developer · Barakaldo, Spain"
+      "subtitle": "Full Stack & Mobile Developer · Barakaldo, Spain",
+      "quest_more_n": "+{n} more quests at mariaba.pages.dev"
     }
   },
   "hearts": [
@@ -473,5 +479,6 @@
       "EN",
       1.5
     ]
-  ]
+  ],
+  "more_quests": null
 }
