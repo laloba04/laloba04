@@ -26,7 +26,7 @@
 
 <picture>
   <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/achievements.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/achievements.svg" width="100%" alt="Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; detección de vida facial en el navegador; RAG con ChromaDB en marcha.">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/achievements.svg" width="100%" alt="Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; control de acceso BLE con Raspberry Pi; RAG con ChromaDB en marcha.">
 </picture>
 
 <picture>
@@ -62,8 +62,8 @@
 
 <a href="https://mariaba.pages.dev">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-sentinelface.svg">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-sentinelface.svg" width="100%" alt="SentinelFace — Detección de vida (liveness) 100 % en el navegador. (React · TypeScript · MediaPipe · TF.js)">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quest-control-acceso-ble.svg">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-control-acceso-ble.svg" width="100%" alt="Control de Acceso BLE — Control de acceso por Bluetooth (BLE) desde el móvil. (React Native · Firebase · Raspberry Pi)">
 </picture>
 </a>
 

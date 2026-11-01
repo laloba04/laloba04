@@ -98,13 +98,13 @@
       "en": "CVE analysis with PDF and HTML reports."
     },
     {
-      "slug": "sentinelface",
-      "name": "SentinelFace",
+      "slug": "control-acceso-ble",
+      "name": "Control de Acceso BLE",
       "color": "blue",
       "status": "done",
-      "stack": "React · TypeScript · MediaPipe · TF.js",
-      "es": "Detección de vida (liveness) 100 % en el navegador.",
-      "en": "Face liveness detection, running 100% in the browser."
+      "stack": "React Native · Firebase · Raspberry Pi",
+      "es": "Control de acceso por Bluetooth (BLE) desde el móvil.",
+      "en": "Bluetooth (BLE) access control from your phone."
     },
     {
       "slug": "habitflow",
@@ -259,14 +259,14 @@
         ],
         [
           "★",
-          "Detección de vida facial en el navegador"
+          "Control de acceso BLE con Raspberry Pi"
         ],
         [
           "◇",
           "RAG con ChromaDB en marcha (rag-notas)"
         ]
       ],
-      "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; detección de vida facial en el navegador; RAG con ChromaDB en marcha.",
+      "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; control de acceso BLE con Raspberry Pi; RAG con ChromaDB en marcha.",
       "inv_title": "INVENTARIO",
       "inv_alt": "Inventario de herramientas: Java, Spring Boot, TypeScript, React, Angular, Ionic, Python, Docker, Kubernetes, GitHub Actions, SonarQube y PostgreSQL.",
       "quests_title": "MISIONES",
@@ -414,14 +414,14 @@
         ],
         [
           "★",
-          "Face liveness detection in the browser"
+          "BLE access control with a Raspberry Pi"
         ],
         [
           "◇",
           "RAG with ChromaDB in progress (rag-notas)"
         ]
       ],
-      "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; face liveness detection in the browser; RAG with ChromaDB in progress.",
+      "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; BLE access control with a Raspberry Pi; RAG with ChromaDB in progress.",
       "inv_title": "INVENTORY",
       "inv_alt": "Tool inventory: Java, Spring Boot, TypeScript, React, Angular, Ionic, Python, Docker, Kubernetes, GitHub Actions, SonarQube and PostgreSQL.",
       "quests_title": "QUESTS",
