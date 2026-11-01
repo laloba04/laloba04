@@ -6,8 +6,8 @@
 **Maria Bravo** · Junior Full Stack & Mobile developer · Barakaldo, Spain
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/hero.svg?v=aa3348a9">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/hero.svg?v=796d7b7c" width="100%" alt="Maria Bravo, Full Stack and Mobile developer in Barakaldo, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic, React Native and Swift; devops with Docker, Kubernetes and GitHub Actions; and status: open to work, available now.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/hero.svg?v=ec0ad0b4">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/hero.svg?v=d81fd620" width="100%" alt="Maria Bravo, Full Stack and Mobile developer in Barakaldo, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic and React Native; devops with Docker, Kubernetes and GitHub Actions; and status: open to work, available now.">
 </picture>
 
 <a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-portfolio.svg?v=5877ff6a" alt="PORTFOLIO"></a>

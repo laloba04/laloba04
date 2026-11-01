@@ -6,8 +6,8 @@
 **Maria Bravo** · Desarrolladora Full Stack y Mobile junior · Barakaldo
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/hero.svg?v=ac0fafbe">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/hero.svg?v=6fa533ab" width="100%" alt="Maria Bravo, desarrolladora Full Stack y Mobile en Barakaldo. Una chica pixel art programa en su portátil con un lobito sentado a su lado, junto a una terminal que ejecuta docker compose up maria y levanta sus servicios: frontend con Angular, React e Ionic; backend con Java, Spring Boot y Python; mobile con Ionic, React Native y Swift; devops con Docker, Kubernetes y GitHub Actions; y estado: disponible, incorporación inmediata.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/hero.svg?v=730013af">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/hero.svg?v=f7150ce0" width="100%" alt="Maria Bravo, desarrolladora Full Stack y Mobile en Barakaldo. Una chica pixel art programa en su portátil con un lobito sentado a su lado, junto a una terminal que ejecuta docker compose up maria y levanta sus servicios: frontend con Angular, React e Ionic; backend con Java, Spring Boot y Python; mobile con Ionic y React Native; devops con Docker, Kubernetes y GitHub Actions; y estado: disponible, incorporación inmediata.">
 </picture>
 
 <a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-portfolio.svg?v=5877ff6a" alt="PORTFOLIO"></a>
