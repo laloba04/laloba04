@@ -4,8 +4,8 @@
 <div align="center">
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/hero.svg?v=b1b3cd96">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/hero.svg?v=de837209" width="100%" alt="Maria Bravo, desarrolladora Full Stack y Mobile en Barakaldo. Una chica pixel art programa en su portátil con un lobito sentado a su lado, junto a una terminal que ejecuta docker compose up maria y levanta sus servicios: frontend con Angular, React e Ionic; backend con Java, Spring Boot y Python; mobile con Ionic y React Native; devops con Docker, Kubernetes y GitHub Actions; y estado: disponible, incorporación inmediata.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/hero.svg?v=f6830019">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/hero.svg?v=c5d43a01" width="100%" alt="Maria Bravo, desarrolladora Full Stack y Mobile en Bilbao. Una chica pixel art programa en su portátil con un lobito sentado a su lado, junto a una terminal que ejecuta docker compose up maria y levanta sus servicios: frontend con Angular, React e Ionic; backend con Java, Spring Boot y Python; mobile con Ionic y React Native; devops con Docker, Kubernetes y GitHub Actions; y estado: disponible, incorporación inmediata.">
 </picture>
 
 <a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-portfolio.svg?v=802bd554" alt="PORTFOLIO"></a>
@@ -14,8 +14,8 @@
 <a href="https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv.pdf"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-cv.svg?v=e5279a9d" alt="CV"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=85211a85">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=30cbb16d" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Barakaldo. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=9232e1f5">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=138991e9" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Bilbao. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: SMR, DAM y Especialización Cloud Native de 600 horas. Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
 </picture>
 
 <picture>

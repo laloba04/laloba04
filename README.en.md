@@ -4,8 +4,8 @@
 <div align="center">
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/hero.svg?v=9d81e01b">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/hero.svg?v=4b04ea38" width="100%" alt="Maria Bravo, Full Stack and Mobile developer in Barakaldo, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic and React Native; devops with Docker, Kubernetes and GitHub Actions; and status: open to work, available now.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/hero.svg?v=7a0d000d">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/hero.svg?v=6694cfc2" width="100%" alt="Maria Bravo, Full Stack and Mobile developer in Bilbao, Spain. A pixel art girl codes on her laptop with a wolf pup sitting beside her, next to a terminal that runs docker compose up maria and starts her services: frontend with Angular, React and Ionic; backend with Java, Spring Boot and Python; mobile with Ionic and React Native; devops with Docker, Kubernetes and GitHub Actions; and status: open to work, available now.">
 </picture>
 
 <a href="https://mariaba.pages.dev"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-portfolio.svg?v=802bd554" alt="PORTFOLIO"></a>
@@ -14,8 +14,8 @@
 <a href="https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv-en.pdf"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-cv.svg?v=e5279a9d" alt="CV"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=def95e17">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=b270e86c" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Barakaldo, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: IT systems, DAM degree and a 600-hour Cloud Native program. Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=3c83830d">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=81d432d1" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Bilbao, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: IT systems, DAM degree and a 600-hour Cloud Native program. Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
 </picture>
 
 <picture>
