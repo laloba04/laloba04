@@ -268,12 +268,8 @@ def stats(d, lang, mode, cfg, live):
 
 
 # ---------- Logros ----------
-TROPHY = ["gggggggggg", "g.ghgggg.g", "g.ghgggg.g", ".ggghgggg.", "..gggggg..",
-          "...gggg...", "....gg....", "....gg....", "..bbbbbb..", "..bbbbbb.."]
-TROPHY_PAL = {"g": "#e3b341", "h": "#fff1b8", "b": "#8a5a2b"}
-HOURGLASS = ["##########", ".#......#.", "..#aaaa#..", "...#aa#...", "....##....",
-             "....##....", "...#..#...", "..#.aa.#..", ".#aaaaaa#.", "##########"]
-HOURGLASS_PAL = {"#": "#8b949e", "a": "#f5a524"}
+PAW = ["..##.##..", "..##.##..", "##.....##", "##.....##", "...###...",
+       "..#####..", ".#######.", ".#######.", "..##.##.."]
 
 
 def achievement_items(d, lang, live):
@@ -288,36 +284,51 @@ def achievement_items(d, lang, live):
 
 
 def achievements(d, lang, mode, cfg, live=None):
+    """Logros como salida de `cat logros.log` en una terminal, con huella de lobo y estado [OK]/[WIP]."""
     w = WIDTH[mode]
     desk = mode == "desktop"
     items = achievement_items(d, lang, live)
     pad = 24 if desk else 12
-    x0 = pad + 24
-    cardw = w - 2 * x0
-    fs = 15 if desk else 13
-    icon_w = 56 if desk else 48
-    maxc = int((cardw - icon_w - 24) / (fs * CW))
+    tx0, tw = pad, w - 2 * pad
+    fs = 15 if desk else 12
+    lh = fs + 12
+    cell = 2
+    tag_w = 6 * fs * CW
+    text_x = tx0 + 16 + 9 * cell + 12 + tag_w
+    maxc = int((tx0 + tw - 16 - text_x) / (fs * CW))
     wrapped = [(done, wrap(txt, maxc)) for done, txt in items]
-    heights = [26 + len(ls) * (fs + 6) + 10 for _, ls in wrapped]
-    h = 80 + sum(hh + 8 for hh in heights) + 18
-    body, pad = section(w, h, d["ach_title"])
-    body.append(rule(x0, cardw))
-    y = 76
-    for i, ((done, ls), hh) in enumerate(zip(wrapped, heights)):
-        g = [frame(x0, y, cardw, hh, fill=CARD, stroke=BORDER, px=2),
-             f'<rect x="{x0+icon_w}" y="{y+2}" width="2" height="{hh-4}" fill="{BORDER}"/>']
-        cell = 4 if desk else 3
-        ix, iy = x0 + (icon_w - 10 * cell) / 2, y + (hh - 10 * cell) / 2
-        g.append(grid(TROPHY, TROPHY_PAL, ix, iy, cell) if done else grid(HOURGLASS, HOURGLASS_PAL, ix, iy, cell))
-        tx = x0 + icon_w + 16
-        g.append(t(tx, y + 22, d["ach_done"] if done else d["ach_wip"], 11 if desk else 10, MUTED))
+    lines_h = sum(len(ls) * (fs + 6) + (lh - fs - 6) for _, ls in wrapped)
+    term_top = 66
+    th = 30 + lh + 10 + lines_h + lh + 14
+    h = term_top + th + 22
+    body, _ = section(w, h, d["ach_title"])
+    body = body[:1] + body[2:]  # sin el marco de sección: la terminal hace de marco
+    body.append(frame(tx0, term_top, tw, th, fill="#010409"))
+    body.append(f'<rect x="{tx0+4}" y="{term_top+4}" width="{tw-8}" height="24" fill="{PANEL}"/>')
+    for k, c in enumerate(["#f85149", "#d29922", GREEN]):
+        body.append(f'<rect x="{tx0+14+k*16}" y="{term_top+12}" width="8" height="8" fill="{c}"/>')
+    body.append(t(tx0 + tw / 2, term_top + 21, "maria@lobera: ~/logros", 12, MUTED, anchor="middle"))
+    y = term_top + 30 + lh
+    body.append(t(tx0 + 16, y, "$", fs, PURPLE) + t(tx0 + 16 + 2 * fs * CW, y, "cat logros.log", fs, GREEN))
+    y += 10
+    for i, (done, ls) in enumerate(wrapped):
+        y += lh
+        tag, tcol = ("[OK] ", GREEN) if done else ("[WIP]", AMBER)
+        g = [grid(PAW, {"#": AMBER if done else "#6e7681"}, tx0 + 16, y - 9 * cell + 1, cell),
+             t(tx0 + 16 + 9 * cell + 12, y, tag, fs, tcol)]
         for k, ln in enumerate(ls):
-            g.append(t(tx, y + 26 + (k + 1) * (fs + 6) - 2, ln, fs, TXT if done else "#c9d1d9"))
-        body.append(f'<g class="pop" style="animation-delay:{0.2*i:.2f}s">' + "".join(g) + "</g>")
-        y += hh + 8
+            g.append(t(text_x, y + k * (fs + 6), ln, fs, TXT if done else "#c9d1d9"))
+        body.append(f'<g class="pop" style="animation-delay:{0.6 + 0.35*i:.2f}s">' + "".join(g) + "</g>")
+        y += (len(ls) - 1) * (fs + 6)
+    y += lh
+    n = len(wrapped)
+    body.append(f'<g class="pop" style="animation-delay:{0.6 + 0.35*n:.2f}s">'
+                + t(tx0 + 16, y, "$", fs, PURPLE)
+                + f'<rect class="cur" x="{tx0 + 16 + 2*fs*CW:.0f}" y="{y-fs+2}" width="{fs*CW:.0f}" height="{fs+2}" fill="{GREEN}"/></g>')
     alt = d["ach_title"].capitalize() + ": " + "; ".join(
         (txt if done else f'{txt} ({d["ach_wip"].rstrip("…").lower()})') for done, txt in items) + "."
-    css = ".pop{opacity:0;animation:pop .4s steps(2) forwards}@keyframes pop{to{opacity:1}}"
+    css = (".pop{opacity:0;animation:pop .3s steps(2) forwards}@keyframes pop{to{opacity:1}}"
+           ".cur{animation:cur 1s steps(1) infinite}@keyframes cur{50%{fill:transparent}}")
     return svg(w, h, "".join(body), alt, css)
 
 

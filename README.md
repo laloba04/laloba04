@@ -19,8 +19,8 @@
 </picture>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/achievements.svg?v=80a858f6">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/achievements.svg?v=3932b5ac" width="100%" alt="Logros desbloqueados: Récord: 39 contribuciones en un solo día; Título oficial de DAM (FP Superior); 600 h de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; Proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; RAG con ChromaDB (rag-notas) (en progreso).">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/achievements.svg?v=baef1a7f">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/achievements.svg?v=a4e4784b" width="100%" alt="Logros desbloqueados: Récord: 39 contribuciones en un solo día; Título oficial de DAM (FP Superior); 600 h de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; Proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; RAG con ChromaDB (rag-notas) (en progreso).">
 </picture>
 
 <picture>
