@@ -271,20 +271,30 @@ def stats(d, lang, mode, cfg, live):
 def achievements(d, lang, mode, cfg):
     w = WIDTH[mode]
     items = d["ach"]
-    cols, cardw, fs, rowh = (2, 392, 13, 46) if mode == "desktop" else (1, w - 72, 12, 44)
-    nrows = (len(items) + cols - 1) // cols
-    h = 80 + nrows * rowh + 24
+    cols, cardw, fs = (2, 392, 13) if mode == "desktop" else (1, w - 72, 12)
+    maxc = int((cardw - 46) / (fs * CW))
+    wrapped = [(ic, wrap(txt, maxc)) for ic, txt in items]
+    lh = fs + 6
+    # alto de cada fila = la tarjeta con más líneas de esa fila
+    rows = [wrapped[i:i + cols] for i in range(0, len(wrapped), cols)]
+    row_h = [max(len(ls) for _, ls in r) * lh + 18 for r in rows]
+    h = 80 + sum(rh + 10 for rh in row_h) + 20
     body, pad = section(w, h, d["ach_title"])
     x_start = pad + 24
     body.append(rule(x_start, w - 2 * x_start))
-    for i, (ic, txt) in enumerate(items):
-        col, row = i % cols, i // cols
-        x = x_start + col * (cardw + 20)
-        y = 96 + row * rowh
-        c = AMBER if ic == "★" else MUTED
-        body.append(f'<g class="pop" style="animation-delay:{0.25*i:.2f}s">'
-                    + frame(x, y - 22, cardw, 36, fill=CARD, stroke=BORDER, px=2)
-                    + t(x + 12, y + 2, ic, 16, c) + t(x + 34, y + 1, txt, fs, TXT) + '</g>')
+    y = 76
+    i = 0
+    for r, rh in zip(rows, row_h):
+        for col, (ic, ls) in enumerate(r):
+            x = x_start + col * (cardw + 20)
+            c = AMBER if ic == "★" else MUTED
+            ty = y + (rh - len(ls) * lh) / 2 + fs
+            texts = "".join(t(x + 34, ty + k * lh, ln, fs, TXT) for k, ln in enumerate(ls))
+            body.append(f'<g class="pop" style="animation-delay:{0.25*i:.2f}s">'
+                        + frame(x, y, cardw, rh, fill=CARD, stroke=BORDER, px=2)
+                        + t(x + 12, y + rh / 2 + 6, ic, 16, c) + texts + '</g>')
+            i += 1
+        y += rh + 10
     css = ".pop{opacity:0;animation:pop .4s steps(2) forwards}@keyframes pop{to{opacity:1}}"
     return svg(w, h, "".join(body), d["ach_alt"], css)
 
