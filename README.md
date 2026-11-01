@@ -43,10 +43,10 @@
 <a href="https://mariaba.pages.dev/proyectos/secaudit/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-secaudit.svg?v=05ef030b" alt="SecAudit — Análisis de CVEs con informes en PDF y HTML. (Python · Go · React)"></a>
 <a href="https://mariaba.pages.dev/proyectos/rag-notas/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-rag-notas.svg?v=7b822069" alt="rag-notas — Preguntas en lenguaje natural sobre mis apuntes (RAG). (Python · ChromaDB · sentence-transformers)"></a>
 
-<a href="https://mariaba.pages.dev">
+<a href="https://mariaba.pages.dev/proyectos/">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quests-more.svg?v=f4b9afda">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quests-more.svg?v=6a024fc2" width="100%" alt="Más misiones en mariaba.pages.dev">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/quests-more.svg?v=3d18f3d2">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quests-more.svg?v=3b98a6d5" width="100%" alt="Más misiones en mariaba.pages.dev">
 </picture>
 </a>
 

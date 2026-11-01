@@ -11,6 +11,10 @@
     "cv": {
       "es": "https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv.pdf",
       "en": "https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv-en.pdf"
+    },
+    "projects": {
+      "es": "https://mariaba.pages.dev/proyectos/",
+      "en": "https://mariaba.pages.dev/en/projects/"
     }
   },
   "inventory": [
@@ -507,5 +511,5 @@
       1.5
     ]
   ],
-  "more_quests": null
+  "more_quests": 4
 }

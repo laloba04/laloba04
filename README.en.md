@@ -43,10 +43,10 @@
 <a href="https://mariaba.pages.dev/en/projects/secaudit/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-secaudit.svg?v=3e6cd42a" alt="SecAudit — CVE analysis with PDF and HTML reports. (Python · Go · React)"></a>
 <a href="https://mariaba.pages.dev/en/projects/rag-notas/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quest-rag-notas.svg?v=e034c134" alt="rag-notas — Ask my study notes questions in plain language (RAG). (Python · ChromaDB · sentence-transformers)"></a>
 
-<a href="https://mariaba.pages.dev/en/">
+<a href="https://mariaba.pages.dev/en/projects/">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/quests-more.svg?v=53093bbe">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quests-more.svg?v=1b8f2cfa" width="100%" alt="More quests at mariaba.pages.dev">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/quests-more.svg?v=dc24ef7b">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quests-more.svg?v=5b142f12" width="100%" alt="More quests at mariaba.pages.dev">
 </picture>
 </a>
 

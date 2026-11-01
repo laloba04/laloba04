@@ -50,7 +50,7 @@ def readme(cfg, lang, has_stats, stats_alt="", cv=None):
         pic("inventory.svg", d["inv_alt"]),
         pic("quests-title.svg", d["quests_title"]),
         quests,
-        linked(links["portfolio"], pic("quests-more.svg", d["quest_more"])),
+        linked(links.get("projects") or links["portfolio"], pic("quests-more.svg", d["quest_more"])),
         pic("night.svg", d["night_alt"]),
         linked(f'mailto:{links["email"]}', pic("start.svg", d["start_alt"].format(email=links["email"]))),
     ]
