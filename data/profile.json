@@ -301,7 +301,7 @@
         ],
         [
           "◇",
-          "RAG con ChromaDB en marcha (rag-notas)"
+          "RAG con ChromaDB (rag-notas)"
         ]
       ],
       "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; RAG con ChromaDB en marcha.",
@@ -332,7 +332,13 @@
         "contribución"
       ],
       "subtitle": "Desarrolladora Full Stack y Mobile · Bilbao",
-      "quest_more_n": "+{n} misiones más en mariaba.pages.dev"
+      "quest_more_n": "+{n} misiones más en mariaba.pages.dev",
+      "ach_done": "¡Logro desbloqueado!",
+      "ach_wip": "En progreso…",
+      "ach_live": {
+        "best": "Récord: {n} contribuciones en un solo día",
+        "streak": "Racha actual: {n} días seguidos"
+      }
     },
     "en": {
       "lang_btn": "ESPAÑOL",
@@ -463,7 +469,7 @@
         ],
         [
           "◇",
-          "RAG with ChromaDB in progress (rag-notas)"
+          "RAG with ChromaDB (rag-notas)"
         ]
       ],
       "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; team DAM final project: BLE access control with a Raspberry Pi; RAG with ChromaDB in progress.",
@@ -494,7 +500,13 @@
         "contribution"
       ],
       "subtitle": "Full Stack & Mobile Developer · Bilbao, Spain",
-      "quest_more_n": "+{n} more quests at mariaba.pages.dev"
+      "quest_more_n": "+{n} more quests at mariaba.pages.dev",
+      "ach_done": "Achievement unlocked!",
+      "ach_wip": "In progress…",
+      "ach_live": {
+        "best": "Record: {n} contributions in a single day",
+        "streak": "Current streak: {n} days in a row"
+      }
     }
   },
   "hearts": [

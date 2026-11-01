@@ -268,35 +268,57 @@ def stats(d, lang, mode, cfg, live):
 
 
 # ---------- Logros ----------
-def achievements(d, lang, mode, cfg):
+TROPHY = ["gggggggggg", "g.ghgggg.g", "g.ghgggg.g", ".ggghgggg.", "..gggggg..",
+          "...gggg...", "....gg....", "....gg....", "..bbbbbb..", "..bbbbbb.."]
+TROPHY_PAL = {"g": "#e3b341", "h": "#fff1b8", "b": "#8a5a2b"}
+HOURGLASS = ["##########", ".#......#.", "..#aaaa#..", "...#aa#...", "....##....",
+             "....##....", "...#..#...", "..#.aa.#..", ".#aaaaaa#.", "##########"]
+HOURGLASS_PAL = {"#": "#8b949e", "a": "#f5a524"}
+
+
+def achievement_items(d, lang, live):
+    """Lista de (hecho?, texto): los fijos de data/profile.json + los de datos vivos de GitHub."""
+    items = [(ic == "★", txt) for ic, txt in d["ach"]]
+    if live:
+        lv = d["ach_live"]
+        items.insert(0, (True, lv["best"].format(n=fmt_int(live["best_day"], lang))))
+        if live.get("current_streak", 0) >= 2:
+            items.append((True, lv["streak"].format(n=live["current_streak"])))
+    return items
+
+
+def achievements(d, lang, mode, cfg, live=None):
     w = WIDTH[mode]
-    items = d["ach"]
-    cols, cardw, fs = (2, 392, 13) if mode == "desktop" else (1, w - 72, 12)
-    maxc = int((cardw - 46) / (fs * CW))
-    wrapped = [(ic, wrap(txt, maxc)) for ic, txt in items]
-    lh = fs + 6
-    # alto de cada fila = la tarjeta con más líneas de esa fila
-    rows = [wrapped[i:i + cols] for i in range(0, len(wrapped), cols)]
-    row_h = [max(len(ls) for _, ls in r) * lh + 18 for r in rows]
-    h = 80 + sum(rh + 10 for rh in row_h) + 20
+    desk = mode == "desktop"
+    items = achievement_items(d, lang, live)
+    pad = 24 if desk else 12
+    x0 = pad + 24
+    cardw = w - 2 * x0
+    fs = 15 if desk else 13
+    icon_w = 56 if desk else 48
+    maxc = int((cardw - icon_w - 24) / (fs * CW))
+    wrapped = [(done, wrap(txt, maxc)) for done, txt in items]
+    heights = [26 + len(ls) * (fs + 6) + 10 for _, ls in wrapped]
+    h = 80 + sum(hh + 8 for hh in heights) + 18
     body, pad = section(w, h, d["ach_title"])
-    x_start = pad + 24
-    body.append(rule(x_start, w - 2 * x_start))
+    body.append(rule(x0, cardw))
     y = 76
-    i = 0
-    for r, rh in zip(rows, row_h):
-        for col, (ic, ls) in enumerate(r):
-            x = x_start + col * (cardw + 20)
-            c = AMBER if ic == "★" else MUTED
-            ty = y + (rh - len(ls) * lh) / 2 + fs
-            texts = "".join(t(x + 34, ty + k * lh, ln, fs, TXT) for k, ln in enumerate(ls))
-            body.append(f'<g class="pop" style="animation-delay:{0.25*i:.2f}s">'
-                        + frame(x, y, cardw, rh, fill=CARD, stroke=BORDER, px=2)
-                        + t(x + 12, y + rh / 2 + 6, ic, 16, c) + texts + '</g>')
-            i += 1
-        y += rh + 10
+    for i, ((done, ls), hh) in enumerate(zip(wrapped, heights)):
+        g = [frame(x0, y, cardw, hh, fill=CARD, stroke=BORDER, px=2),
+             f'<rect x="{x0+icon_w}" y="{y+2}" width="2" height="{hh-4}" fill="{BORDER}"/>']
+        cell = 4 if desk else 3
+        ix, iy = x0 + (icon_w - 10 * cell) / 2, y + (hh - 10 * cell) / 2
+        g.append(grid(TROPHY, TROPHY_PAL, ix, iy, cell) if done else grid(HOURGLASS, HOURGLASS_PAL, ix, iy, cell))
+        tx = x0 + icon_w + 16
+        g.append(t(tx, y + 22, d["ach_done"] if done else d["ach_wip"], 11 if desk else 10, MUTED))
+        for k, ln in enumerate(ls):
+            g.append(t(tx, y + 26 + (k + 1) * (fs + 6) - 2, ln, fs, TXT if done else "#c9d1d9"))
+        body.append(f'<g class="pop" style="animation-delay:{0.2*i:.2f}s">' + "".join(g) + "</g>")
+        y += hh + 8
+    alt = d["ach_title"].capitalize() + ": " + "; ".join(
+        (txt if done else f'{txt} ({d["ach_wip"].rstrip("…").lower()})') for done, txt in items) + "."
     css = ".pop{opacity:0;animation:pop .4s steps(2) forwards}@keyframes pop{to{opacity:1}}"
-    return svg(w, h, "".join(body), d["ach_alt"], css)
+    return svg(w, h, "".join(body), alt, css)
 
 
 # ---------- Inventario ----------

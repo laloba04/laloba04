@@ -11,6 +11,10 @@ MOBILE_QUERY = "(max-width: 600px)"
 
 def readme(cfg, lang, has_stats, stats_alt="", cv=None):
     d = cfg["lang"][lang]
+    ach_path = ROOT / "assets" / lang / "achievements.svg"
+    ach_alt = re.search(r'aria-label="([^"]*)"', ach_path.read_text(encoding="utf-8")).group(1) if ach_path.exists() else d["ach_alt"]
+    import html
+    ach_alt = html.unescape(ach_alt)
     user, links = cfg["user"], dict(cfg["links"])
     # enlaces que pueden tener versión por idioma: {"es": ..., "en": ...}
     links = {k: (v.get(lang) if isinstance(v, dict) else v) for k, v in links.items()}
@@ -46,7 +50,7 @@ def readme(cfg, lang, has_stats, stats_alt="", cv=None):
     if has_stats:
         parts.append(pic("stats.svg", stats_alt))
     parts += [
-        pic("achievements.svg", d["ach_alt"]),
+        pic("achievements.svg", ach_alt),
         pic("inventory.svg", d["inv_alt"]),
         pic("quests-title.svg", d["quests_title"]),
         quests,

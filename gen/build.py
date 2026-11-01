@@ -66,16 +66,13 @@ def build():
             files = {
                 "hero.svg": S.hero(d, lang, mode, cfg),
                 "sheet.svg": S.sheet(d, lang, mode, cfg, live),
-                "achievements.svg": S.achievements(d, lang, mode, cfg),
+                "achievements.svg": S.achievements(d, lang, mode, cfg, live),
                 "inventory.svg": S.inventory(d, lang, mode, cfg),
                 "quests-title.svg": S.quests_title(d, lang, mode, cfg),
                 "quests-more.svg": S.quests_more(d, lang, mode, cfg),
                 "night.svg": S.night(d, lang, mode, cfg),
                 "start.svg": S.start(d, lang, mode, cfg),
             }
-            if live:
-                files["stats.svg"] = S.stats(d, lang, mode, cfg, live)
-                stats_alt = re.search(r'aria-label="([^"]*)"', files["stats.svg"]).group(1)
             if mode == "desktop":  # las tarjetas de misión valen igual para PC y móvil
                 for q in [q for q in cfg["quests"] if q.get("show", True)]:
                     files[f'quest-{q["slug"]}.svg'] = S.quest(d, lang, mode, cfg, q)
@@ -84,7 +81,7 @@ def build():
             count += len(files)
         import html
         write(ROOT / ("README.md" if lang == "es" else "README.en.md"),
-              readme(cfg, lang, bool(live), html.unescape(stats_alt), cv_link(cfg, lang)))
+              readme(cfg, lang, False, "", cv_link(cfg, lang)))
     print(f"{count} SVG generados" + ("" if live else " (sin datos vivos: data/live.json vacío)"))
     for lang in cfg["lang"]:
         if not cv_link(cfg, lang):
