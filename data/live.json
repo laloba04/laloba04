@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-03",
-  "total": 634,
+  "total": 643,
   "active_days": 107,
   "current_streak": 3,
   "longest_streak": 6,
@@ -9,32 +9,32 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 48.9
+      "pct": 48.5
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "pct": 17.7
+      "pct": 17.6
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "pct": 10.8
+      "pct": 11.4
     },
     {
       "name": "Swift",
       "color": "#F05138",
-      "pct": 10.4
+      "pct": 10.3
     },
     {
       "name": "Java",
       "color": "#b07219",
-      "pct": 5.9
+      "pct": 5.8
     },
     {
       "name": "CSS",
       "color": "#663399",
-      "pct": 2.3
+      "pct": 2.2
     }
   ]
 }
