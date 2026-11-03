@@ -32,11 +32,12 @@ def readme(cfg, lang, cv=None):
     def linked(href, inner):
         return f'<a href="{href}">\n{inner}\n</a>'
 
-    # tarjetas de 412 px sin ancho fijo: dos por fila en PC, una por fila en móvil
-    quests = "\n".join(
-        f'<a href="{(q["url"].get(lang) if isinstance(q.get("url"), dict) else q.get("url")) or links["portfolio"]}"><img src="{a}/quest-{q["slug"]}.svg" '
-        f'alt="{esc(q["name"])} — {esc(q[lang])} ({esc(q["stack"])})"></a>'
-        for q in cfg["quests"] if q.get("show", True))
+    # tarjetas de 412 px sin ancho fijo: como mucho dos por fila en PC (salto cada dos) y una por fila en móvil
+    cards = [
+        f'<a href="{(q["url"].get(lang) if isinstance(q.get("url"), dict) else q.get("url")) or links["portfolio"]}">'
+        f'<img src="{a}/quest-{q["slug"]}.svg" alt="{esc(q["name"])} — {esc(q[lang])} ({esc(q["stack"])})"></a>'
+        for q in cfg["quests"] if q.get("show", True)]
+    quests = "\n<br>\n".join("\n".join(cards[i:i + 2]) for i in range(0, len(cards), 2))
 
     parts = [
         pic("hero.svg", d["hero_alt"]),

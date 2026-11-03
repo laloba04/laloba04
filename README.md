@@ -35,6 +35,7 @@
 
 <a href="https://mariaba.pages.dev/proyectos/skyfence/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-skyfence.svg?v=c7ffb703" alt="SkyFence — Alertas en tiempo real cuando una aeronave o un dron entra en una zona restringida. (Java 17 · Spring Boot · React · WebSocket)"></a>
 <a href="https://mariaba.pages.dev/proyectos/casinoctf/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-casinoctf.svg?v=a57fae24" alt="CasinoCTF — Un casino con 9 retos OWASP para practicar seguridad web. (React · Flask · PostgreSQL · PWA)"></a>
+<br>
 <a href="https://mariaba.pages.dev/proyectos/secaudit/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-secaudit.svg?v=3dbbb325" alt="SecAudit — Auditoría pasiva de seguridad web con informes en PDF y HTML. (Python · Go · React)"></a>
 <a href="https://mariaba.pages.dev/proyectos/rag-notas/"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/quest-rag-notas.svg?v=10c0138e" alt="rag-notas — Respuestas con citas sobre documentación técnica en español (RAG). (Python · ChromaDB · sentence-transformers · Ollama)"></a>
 
