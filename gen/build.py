@@ -6,7 +6,6 @@ Lee:  data/profile.json (textos, proyectos, inventario) y data/live.json (datos 
 No necesita dependencias externas.
 """
 import json
-import re
 import shutil
 import sys
 
@@ -60,7 +59,6 @@ def build():
             write(base / f"btn-{key}.svg", S.button(d["btn"][key], key))
             count += 1
         count += 1
-        stats_alt = ""
         for mode in WIDTH:
             folder = base if mode == "desktop" else base / "mobile"
             files = {
@@ -79,9 +77,8 @@ def build():
             for name, content in files.items():
                 write(folder / name, content)
             count += len(files)
-        import html
         write(ROOT / ("README.md" if lang == "es" else "README.en.md"),
-              readme(cfg, lang, False, "", cv_link(cfg, lang)))
+              readme(cfg, lang, cv_link(cfg, lang)))
     print(f"{count} SVG generados" + ("" if live else " (sin datos vivos: data/live.json vacío)"))
     for lang in cfg["lang"]:
         if not cv_link(cfg, lang):

@@ -28,7 +28,7 @@ def test_both_languages_have_same_structure():
     cfg = json.loads((ROOT / "data" / "profile.json").read_text(encoding="utf-8"))
     es, en = cfg["lang"]["es"], cfg["lang"]["en"]
     assert set(es) == set(en)
-    for key in ("sheet", "ach", "stats_labels"):
+    for key in ("sheet", "ach", "term"):
         assert len(es[key]) == len(en[key]), key
     for q in cfg["quests"]:
         assert q["es"] and q["en"], q["slug"]

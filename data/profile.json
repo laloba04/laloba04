@@ -175,7 +175,6 @@
     "es": {
       "lang_btn": "ENGLISH",
       "lang_alt": "Botón ENGLISH: cambia a la versión del perfil en inglés.",
-      "tagline": "Desarrolladora Full Stack y Mobile junior · Bilbao",
       "term": {
         "desktop": [
           [
@@ -269,14 +268,7 @@
         ]
       ],
       "sheet_alt": "Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Bilbao. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: Empecé en sistemas (SMR), entre primero y segundo de DAM hice un curso de Unity (300 h) y terminé especializándome en Cloud Native (600 h). Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.",
-      "stats_title": "HIGH SCORE",
-      "stats_labels": [
-        "RACHA ACTUAL",
-        "MEJOR RACHA",
-        "RÉCORD EN UN DÍA"
-      ],
       "stats_updated": "actualizado",
-      "stats_alt": "High score en GitHub: racha actual de {current} días, mejor racha de {longest} días y récord de {best} contribuciones en un día.",
       "ach_title": "LOGROS DESBLOQUEADOS",
       "ach": [
         [
@@ -321,16 +313,6 @@
       "exp": "{total} contribuciones · {active} días activos",
       "skills": "HABILIDADES",
       "sheet_live_alt": " Experiencia: {total} contribuciones y {active} días activos en el último año. Habilidades: {langs}.",
-      "stats_units": [
-        "días",
-        "días",
-        "contribuciones"
-      ],
-      "stats_units_one": [
-        "día",
-        "día",
-        "contribución"
-      ],
       "subtitle": "Desarrolladora Full Stack y Mobile · Bilbao",
       "quest_more_n": "+{n} misiones más en mariaba.pages.dev",
       "ach_done": "¡Logro desbloqueado!",
@@ -343,7 +325,6 @@
     "en": {
       "lang_btn": "ESPAÑOL",
       "lang_alt": "ESPAÑOL button: switches to the Spanish version of the profile.",
-      "tagline": "Junior Full Stack & Mobile developer · Bilbao, Spain",
       "term": {
         "desktop": [
           [
@@ -437,14 +418,7 @@
         ]
       ],
       "sheet_alt": "Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Bilbao, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: Started in IT systems (SMR), took a 300-hour Unity course between the first and second year of my DAM degree, and went on to specialize in Cloud Native (600 h). Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.",
-      "stats_title": "HIGH SCORE",
-      "stats_labels": [
-        "CURRENT STREAK",
-        "BEST STREAK",
-        "BEST DAY"
-      ],
       "stats_updated": "updated",
-      "stats_alt": "GitHub high score: current streak of {current} days, best streak of {longest} days and a record of {best} contributions in one day.",
       "ach_title": "ACHIEVEMENTS UNLOCKED",
       "ach": [
         [
@@ -489,16 +463,6 @@
       "exp": "{total} contributions · {active} active days",
       "skills": "SKILLS",
       "sheet_live_alt": " Experience: {total} contributions and {active} active days in the last year. Skills: {langs}.",
-      "stats_units": [
-        "days",
-        "days",
-        "contributions"
-      ],
-      "stats_units_one": [
-        "day",
-        "day",
-        "contribution"
-      ],
       "subtitle": "Full Stack & Mobile Developer · Bilbao, Spain",
       "quest_more_n": "+{n} more quests at mariaba.pages.dev",
       "ach_done": "Achievement unlocked!",

@@ -9,7 +9,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 MOBILE_QUERY = "(max-width: 600px)"
 
 
-def readme(cfg, lang, has_stats, stats_alt="", cv=None):
+def readme(cfg, lang, cv=None):
     d = cfg["lang"][lang]
     ach_path = ROOT / "assets" / lang / "achievements.svg"
     ach_alt = re.search(r'aria-label="([^"]*)"', ach_path.read_text(encoding="utf-8")).group(1) if ach_path.exists() else d["ach_alt"]
@@ -47,8 +47,6 @@ def readme(cfg, lang, has_stats, stats_alt="", cv=None):
         ] + ([f'<a href="{cv}"><img src="{a}/btn-cv.svg" alt="{b["cv"]}"></a>'] if cv else [])),
         pic("sheet.svg", d["sheet_alt"]),
     ]
-    if has_stats:
-        parts.append(pic("stats.svg", stats_alt))
     parts += [
         pic("achievements.svg", ach_alt),
         pic("inventory.svg", d["inv_alt"]),

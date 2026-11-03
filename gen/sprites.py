@@ -129,9 +129,6 @@ def girl_scene(x0, y0, s, silhouette=None, anim=True, pup=True):
     return "".join(out)
 
 
-def girl_head(x, y, s):
-    return grid(GIRL, GIRL_PAL, x, y, s)
-
 
 # ---------- Letras grandes (5x7) para el nombre ----------
 BIG = {

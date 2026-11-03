@@ -2,9 +2,9 @@
 import json
 import random
 
-from pixel import (AMBER, BG, BLUE, BORDER, CARD, GREEN, MOON, MUTED, NAMED, PANEL, PURPLE, ROOT, TXT,
+from pixel import (AMBER, BG, BLUE, BORDER, GREEN, MOON, MUTED, NAMED, PANEL, PURPLE, ROOT, TXT,
                    WIDTH, fmt_int, frame, grid, rule, section, svg, t, wrap)
-from sprites import big_text, big_width, BLINK_CSS, HOWL, MOON as MOON_SPRITE, SCENE_CSS, TWINKLE_CSS, girl_head, girl_scene
+from sprites import big_text, big_width, BLINK_CSS, HOWL, MOON as MOON_SPRITE, SCENE_CSS, TWINKLE_CSS, girl_scene
 
 CW = 0.6  # ancho de carácter en múltiplos del tamaño de diseño
 
@@ -239,35 +239,6 @@ def sheet(d, lang, mode, cfg, live=None):
     return svg(w, h, "".join(body), alt)
 
 
-# ---------- High score (datos vivos de GitHub) ----------
-def stats(d, lang, mode, cfg, live):
-    w = WIDTH[mode]
-    desk = mode == "desktop"
-    values = [live["current_streak"], live["longest_streak"], live["best_day"]]
-    cols = 3 if desk else 1
-    box_h = 74
-    nrows = 3 // cols
-    h = 80 + nrows * (box_h + 10) + 30
-    body, pad = section(w, h, d["stats_title"])
-    x_in = pad + 24
-    body.append(rule(x_in, w - 2 * x_in))
-    gap = 12
-    bw = (w - 2 * x_in - (cols - 1) * gap) / cols
-    for i, (label, val, unit, one) in enumerate(zip(d["stats_labels"], values, d["stats_units"],
-                                                    d["stats_units_one"])):
-        unit = one if val == 1 else unit
-        c, r = i % cols, i // cols
-        x, y = x_in + c * (bw + gap), 76 + r * (box_h + 10)
-        body.append(frame(x, y, bw, box_h, fill=CARD, stroke=BORDER, px=3))
-        body.append(t(x + bw / 2, y + 36, f"{fmt_int(val, lang)} {unit}", 22 if desk else 20, AMBER, anchor="middle"))
-        body.append(t(x + bw / 2, y + 60, label, 11, MUTED, anchor="middle"))
-    body.append(t(w - x_in, h - 22, f'{"actualizado" if lang == "es" else "updated"}: {live["updated"]}',
-                  10, MUTED, anchor="end"))
-    alt = d["stats_alt"].format(current=values[0], longest=values[1], best=values[2])
-    return svg(w, h, "".join(body), alt)
-
-
-# ---------- Logros ----------
 PAW = ["..##.##..", "..##.##..", "##.....##", "##.....##", "...###...",
        "..#####..", ".#######.", ".#######.", "..##.##.."]
 
@@ -455,8 +426,8 @@ def night(d, lang, mode, cfg):
     desk = mode == "desktop"
     h = 280 if desk else 240
     ground = h - 30
-    body = [f'<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">'
-            f'<stop offset="0" stop-color="#05070d"/><stop offset="1" stop-color="#16213a"/></linearGradient></defs>',
+    body = ['<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">'
+            '<stop offset="0" stop-color="#05070d"/><stop offset="1" stop-color="#16213a"/></linearGradient></defs>',
             f'<rect width="{w}" height="{h}" fill="url(#sky)"/>']
     rnd = random.Random(4)
     for i in range(55 if desk else 30):

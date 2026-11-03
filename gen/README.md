@@ -11,7 +11,7 @@ Todo lo que se ve en el perfil se genera con `python gen/build.py`. No edites `a
 | Estructura del README | `gen/readme.py` |
 | Un logo del inventario | Pon el SVG en `gen/icons/` y ejecuta `python tools/pixelate_icons.py` |
 
-`data/live.json` lo escribe la Action **Datos vivos** cada día (contribuciones, rachas y lenguajes). Mientras esté vacío, la sección de puntuación no aparece.
+`data/live.json` lo escribe la Action **Datos vivos** cada día (contribuciones, rachas y lenguajes). Con esos datos se rellenan la barra de EXP y las habilidades de la ficha, y los logros de récord y racha. Mientras esté vacío, esas partes no aparecen.
 
 Antes de subir cambios:
 
