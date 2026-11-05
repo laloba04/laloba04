@@ -465,10 +465,20 @@ def night(d, lang, mode, cfg):
     wy = rock_top + 6 - len(HOWL) * ws
     body.append(grid(HOWL, {"#": "#05070d"}, rx + 10, wy, ws))
     body.append(f'<g class="howl">{t(rx + 10 + 4 * ws, wy + 2 * ws, d["howl"], 16 if desk else 14, MOON, anchor="end")}</g>')
+    # easter egg: una estrella fugaz cruza el cielo unos instantes cada 30 s
+    sx, sy, dx, dy = (140, 34, 300, 90) if desk else (24, 22, 170, 52)
+    trail = "".join(
+        f'<rect x="{-k*9:.0f}" y="{-k*2.7:.0f}" width="{3 if k else 4}" height="{3 if k else 4}" '
+        f'fill="{MOON}" opacity="{1 - k*0.13:.2f}"/>' for k in range(7))
+    body.append(f'<g transform="translate({sx} {sy})"><g class="shoot">{trail}</g></g>')
     body.append(f'<rect y="{ground}" width="{w}" height="30" fill="#070b14"/>')
     for x in range(0, w, 12):
         body.append(f'<rect x="{x}" y="{ground}" width="6" height="3" fill="#0f1a2c"/>')
     css = (TWINKLE_CSS + SCENE_CSS +
+           ".shoot{opacity:0;animation:shoot 30s linear infinite}"
+           f"@keyframes shoot{{0%,82%{{opacity:0;transform:translate(0,0)}}"
+           f"83%{{opacity:1;transform:translate(0,0)}}87%{{opacity:1;transform:translate({dx}px,{dy}px)}}"
+           f"88%,100%{{opacity:0;transform:translate({dx}px,{dy}px)}}}}"
            ".howl{opacity:0;animation:howl 6s steps(1) infinite}"
            "@keyframes howl{0%,40%{opacity:0}45%,85%{opacity:1}90%,100%{opacity:0}}")
     return svg(w, h, "".join(body), d["night_alt"], css)
