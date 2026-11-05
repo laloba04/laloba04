@@ -1,21 +1,3 @@
-<!--
-                                ,,@@@@                  ....OOOOOOOOOOOO....
-                    ,,      ,,@@@@@@""                OOOOOOOO''''OOOOOOOOOOOO
-                    @@@@,,@@@@@@@@@@                  OOOOOOOO....OOOOOOOOOOOO
-                      @@@@@@@@@@@@""                  OOOOOOOOOOOOOO    OOOOOO
-                    ,,@@@@@@@@@@@@                    OOOOOOOOOOOOOOOOOOOOOOOO
-                  ,,@@@@@@@@@@@@@@                      ''''OOOOOOOOOOOO''''
-              ,,@@@@@@@@@@@@@@@@@@
-          ,,@@@@@@@@@@@@@@@@@@@@@@
-        ,,@@@@@@@@@@@@@@@@@@@@@@@@
-        @@@@@@@@@@@@@@@@@@""  @@@@
-      ,,@@@@@@@@@@@@@@@@      @@@@
-,,,,@@@@""@@@@@@@@@@@@""    @@@@@@
-""""""    """"""""""      """"""""
-
-  maria@dev:~$ ./aullar
-  ¿Mirando el código? Me gusta tu estilo. Hablemos: mba.maria08@gmail.com
--->
 <!-- Archivo generado por gen/build.py: edita data/profile.json y vuelve a generarlo. -->
 <p align="right"><a href="https://github.com/laloba04/laloba04/blob/main/README.en.md"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-lang.svg?v=46a1736a" alt="Botón ENGLISH: cambia a la versión del perfil en inglés."></a></p>
 

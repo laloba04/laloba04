@@ -182,27 +182,3 @@ def big_text(text, x, y, cell, color, shadow="#30363d"):
                     out_c.append(f'<rect x="{px}" y="{py}" width="{cell+half}" height="{cell}" fill="{color}"/>')
     return "<g>" + "".join(out_s) + "</g><g>" + "".join(out_c) + "</g>"
 
-
-def ascii_howl():
-    """El lobo que aúlla y la luna de la escena de noche, en ASCII (2 columnas por píxel, 2 filas por línea)."""
-    h, w = len(HOWL), len(HOWL[0])
-    g = [list(r.ljust(w + 16, ".")) for r in HOWL]
-    for j, row in enumerate(MOON):
-        for i, c in enumerate(row):
-            if c == "#" and j < h:
-                g[j][w + 3 + i] = "m"
-    rows = ["".join(r) for r in g]
-    if h % 2:
-        rows.append("." * len(rows[0]))
-
-    def cell(a, b):
-        if a != "." and b != ".":
-            return "@@" if a == "#" else "OO"
-        if a != ".":
-            return '""' if a == "#" else "''"
-        if b != ".":
-            return ",," if b == "#" else ".."
-        return "  "
-
-    return "\n".join("".join(cell(rows[j][i], rows[j + 1][i]) for i in range(len(rows[0]))).rstrip()
-                     for j in range(0, len(rows), 2))

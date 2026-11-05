@@ -320,8 +320,7 @@
       "ach_live": {
         "best": "Récord: {n} contribuciones en un solo día",
         "streak": "Racha actual: {n} días seguidos"
-      },
-      "easter_egg": "¿Mirando el código? Me gusta tu estilo. Hablemos: {email}"
+      }
     },
     "en": {
       "lang_btn": "ESPAÑOL",
@@ -471,8 +470,7 @@
       "ach_live": {
         "best": "Record: {n} contributions in a single day",
         "streak": "Current streak: {n} days in a row"
-      },
-      "easter_egg": "Reading the source? I like your style. Let's talk: {email}"
+      }
     }
   },
   "hearts": [
