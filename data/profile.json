@@ -130,9 +130,9 @@
       "name": "rag-notas",
       "color": "moon",
       "status": "wip",
-      "stack": "Python · ChromaDB · sentence-transformers · Ollama",
-      "es": "Respuestas con citas sobre documentación técnica en español (RAG).",
-      "en": "Answers with citations over technical documentation in Spanish (RAG).",
+      "stack": "Python · LangGraph · ChromaDB · Ollama · Groq",
+      "es": "RAG agéntico con LangGraph que responde con citas sobre documentación técnica.",
+      "en": "Agentic RAG with LangGraph that answers with citations over technical docs.",
       "featured": false,
       "show": true,
       "url": {
@@ -293,7 +293,7 @@
         ],
         [
           "◇",
-          "RAG con ChromaDB (rag-notas)"
+          "RAG agéntico con LangGraph y ChromaDB (rag-notas)"
         ]
       ],
       "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; RAG con ChromaDB en marcha.",
@@ -443,7 +443,7 @@
         ],
         [
           "◇",
-          "RAG with ChromaDB (rag-notas)"
+          "Agentic RAG with LangGraph and ChromaDB (rag-notas)"
         ]
       ],
       "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; team DAM final project: BLE access control with a Raspberry Pi; RAG with ChromaDB in progress.",
