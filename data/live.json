@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "total": 764,
   "active_days": 120,
   "current_streak": 12,
@@ -9,7 +9,7 @@
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 45.9
+      "pct": 46.0
     },
     {
       "name": "JavaScript",
