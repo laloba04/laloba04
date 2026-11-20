@@ -14,13 +14,13 @@
 <a href="https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv-en.pdf"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-cv.svg?v=4d884617" alt="CV"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=bcf2d51c">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=529707b0" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Bilbao, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: Started in IT systems (SMR), took a 300-hour Unity course between the first and second year of my DAM degree, and went on to specialize in Cloud Native (600 h). Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=f8085bea">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=2f97c4e1" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Bilbao, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: Started in IT systems (SMR), took a 300-hour Unity course between the first and second year of my DAM degree, and went on to specialize in Cloud Native (600 h). Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
 </picture>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/achievements.svg?v=e0c9c97e">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/achievements.svg?v=401a0214" width="100%" alt="Achievements unlocked: Record: 39 contributions in a single day; Official DAM degree (Spanish higher VET); 600 h Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; Team DAM final project: BLE access control with a Raspberry Pi; Agentic RAG with LangGraph and ChromaDB (rag-notas) (in progress); Current streak: 12 days in a row.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/achievements.svg?v=d05be403">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/achievements.svg?v=e3b1f9cc" width="100%" alt="Achievements unlocked: Record: 39 contributions in a single day; Official DAM degree (Spanish higher VET); 600 h Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; Team DAM final project: BLE access control with a Raspberry Pi; Agentic RAG with LangGraph and ChromaDB (rag-notas) (in progress).">
 </picture>
 
 <picture>
