@@ -1,25 +1,25 @@
 {
-  "updated": "2026-11-20",
-  "total": 768,
-  "active_days": 121,
-  "current_streak": 1,
+  "updated": "2026-11-21",
+  "total": 784,
+  "active_days": 122,
+  "current_streak": 2,
   "longest_streak": 12,
   "best_day": 39,
   "languages": [
     {
       "name": "TypeScript",
       "color": "#3178c6",
-      "pct": 45.9
+      "pct": 45.6
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "pct": 23.9
+      "pct": 23.7
     },
     {
       "name": "Python",
       "color": "#3572A5",
-      "pct": 10.6
+      "pct": 11.4
     },
     {
       "name": "Swift",
