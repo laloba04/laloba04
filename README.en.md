@@ -14,8 +14,8 @@
 <a href="https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv-en.pdf"><img src="https://github.com/laloba04/laloba04/raw/main/assets/en/btn-cv.svg?v=390581f5" alt="CV"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=000fe364">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=20ba6cd6" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Bilbao, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: Started in IT systems (SMR), took a 300-hour Unity course between the first and second year of my DAM degree, and went on to specialize in Cloud Native (600 h). Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/sheet.svg?v=4b7e231b">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/sheet.svg?v=ddc21cd2" width="100%" alt="Character sheet. Class: Full Stack and Mobile, Cloud Native. Level: junior, 1 year and 1 month in industry. Base: Bilbao, Spain. Guilds: Batura Mobile, Grupo Radimer, BeXReal. Origin: Started in IT systems (SMR), took a 300-hour Unity course between the first and second year of my DAM degree, and went on to specialize in Cloud Native (600 h). Languages: Spanish native, Basque B1, English intermediate. Training: RAG and generative AI, then DevSecOps.">
 </picture>
 
 <picture>
