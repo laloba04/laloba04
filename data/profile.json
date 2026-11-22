@@ -130,9 +130,9 @@
       "name": "rag-notas",
       "color": "moon",
       "status": "wip",
-      "stack": "Python · LangGraph · ChromaDB · MCP · Ollama",
-      "es": "RAG agéntico con LangGraph que responde con citas sobre documentación técnica.",
-      "en": "Agentic RAG with LangGraph that answers with citations over technical docs.",
+      "stack": "LangGraph · MCP · FastAPI · Angular · Docker",
+      "es": "RAG agéntico con LangGraph: API FastAPI, chat en Angular y respuestas con citas.",
+      "en": "Agentic RAG with LangGraph: FastAPI API, Angular chat and cited answers.",
       "featured": false,
       "show": true,
       "url": {
@@ -292,8 +292,12 @@
           "Proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi"
         ],
         [
+          "★",
+          "Imágenes Docker de rag-notas sin vulnerabilidades HIGH/CRITICAL corregibles (Trivy en CI)"
+        ],
+        [
           "◇",
-          "RAG agéntico con LangGraph, servidor MCP y LLM juez (rag-notas)"
+          "RAG agéntico con LangGraph, MCP, API FastAPI y chat en Angular (rag-notas)"
         ]
       ],
       "ach_alt": "Logros desbloqueados: título oficial de DAM; 600 horas de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; RAG con ChromaDB en marcha.",
@@ -442,8 +446,12 @@
           "Team DAM final project: BLE access control with a Raspberry Pi"
         ],
         [
+          "★",
+          "rag-notas Docker images with no fixable HIGH/CRITICAL vulnerabilities (Trivy in CI)"
+        ],
+        [
           "◇",
-          "Agentic RAG with LangGraph, an MCP server and an LLM judge (rag-notas)"
+          "Agentic RAG with LangGraph, MCP, a FastAPI API and an Angular chat (rag-notas)"
         ]
       ],
       "ach_alt": "Achievements unlocked: official DAM degree; 600-hour Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; team DAM final project: BLE access control with a Raspberry Pi; RAG with ChromaDB in progress.",
