@@ -41,8 +41,8 @@
 
 <a href="https://mariaba.pages.dev/en/projects/">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/quests-more.svg?v=c38414f4">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quests-more.svg?v=f6a7afc3" width="100%" alt="More quests at mariaba.pages.dev">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/quests-more.svg?v=4990f59f">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/quests-more.svg?v=d2f3a735" width="100%" alt="More quests at mariaba.pages.dev">
 </picture>
 </a>
 
