@@ -14,13 +14,13 @@
 <a href="https://mariaba.pages.dev/assets/cv/maria-bravo-angulo-cv.pdf"><img src="https://github.com/laloba04/laloba04/raw/main/assets/es/btn-cv.svg?v=ce78a4d0" alt="CV"></a>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=0b2214cd">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=b26bb400" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Bilbao. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: Empecé en sistemas (SMR), entre primero y segundo de DAM hice un curso de Unity (300 h) y terminé especializándome en Cloud Native (600 h). Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/sheet.svg?v=8f400593">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/sheet.svg?v=e1348a19" width="100%" alt="Ficha de personaje. Clase: Full Stack y Mobile, Cloud Native. Nivel: junior, 1 año y 1 mes en empresa. Base: Bilbao. Gremios: Batura Mobile, Grupo Radimer, BeXReal. Origen: Empecé en sistemas (SMR), entre primero y segundo de DAM hice un curso de Unity (300 h) y terminé especializándome en Cloud Native (600 h). Idiomas: español nativo, euskera B1, inglés intermedio. Entrenando: RAG e IA generativa, después DevSecOps.">
 </picture>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/achievements.svg?v=dcc7f072">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/achievements.svg?v=890b170c" width="100%" alt="Logros desbloqueados: Récord: 39 contribuciones en un solo día; Título oficial de DAM (FP Superior); 600 h de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; Proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; Imágenes Docker de rag-notas sin vulnerabilidades HIGH/CRITICAL corregibles (Trivy en CI); RAG agéntico con LangGraph, MCP, API FastAPI y chat en Angular (rag-notas) (en progreso); Racha actual: 3 días seguidos.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/es/mobile/achievements.svg?v=e3b72a80">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/es/achievements.svg?v=800c715f" width="100%" alt="Logros desbloqueados: Récord: 39 contribuciones en un solo día; Título oficial de DAM (FP Superior); 600 h de especialización Cloud Native; SkyFence desplegada con pipeline DevSecOps; 9 retos OWASP jugables en CasinoCTF; Proyecto final de DAM en equipo: control de acceso BLE con Raspberry Pi; Imágenes Docker de rag-notas sin vulnerabilidades HIGH/CRITICAL corregibles (Trivy en CI); RAG agéntico con LangGraph, MCP, API FastAPI y chat en Angular (rag-notas) (en progreso); Racha actual: 4 días seguidos.">
 </picture>
 
 <picture>
