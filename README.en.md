@@ -19,8 +19,8 @@
 </picture>
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/achievements.svg?v=ad1a579b">
-  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/achievements.svg?v=863d6615" width="100%" alt="Achievements unlocked: Record: 39 contributions in a single day; Official DAM degree (Spanish higher VET); 600 h Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; Team DAM final project: BLE access control with a Raspberry Pi; rag-notas Docker images with no fixable HIGH/CRITICAL vulnerabilities (Trivy in CI); Agentic RAG with LangGraph, MCP, a FastAPI API and an Angular chat, with a live demo (rag-notas); Current streak: 6 days in a row.">
+  <source media="(max-width: 600px)" srcset="https://github.com/laloba04/laloba04/raw/main/assets/en/mobile/achievements.svg?v=f4d21d5a">
+  <img src="https://github.com/laloba04/laloba04/raw/main/assets/en/achievements.svg?v=eb7e3d51" width="100%" alt="Achievements unlocked: Record: 39 contributions in a single day; Official DAM degree (Spanish higher VET); 600 h Cloud Native specialization; SkyFence deployed with a DevSecOps pipeline; 9 playable OWASP challenges in CasinoCTF; Team DAM final project: BLE access control with a Raspberry Pi; rag-notas Docker images with no fixable HIGH/CRITICAL vulnerabilities (Trivy in CI); Agentic RAG with LangGraph, MCP, a FastAPI API and an Angular chat, with a live demo (rag-notas).">
 </picture>
 
 <picture>
